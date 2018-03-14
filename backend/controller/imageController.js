@@ -9,7 +9,7 @@ const imageService = require('../service/imageService');
 
 
 router.get('/images', function (req, res) {
-  imageService.imageService.getImages().then( images => {
+  imageService.imageService.getImages(req.query.q).then( images => {
     res.status(200).send(images);
   }).catch( err => {
     res.status(500).send(err);

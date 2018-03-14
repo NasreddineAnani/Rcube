@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
 
   images: any = [];
   search: boolean = false;
-  searchInput: string;
 
   constructor( private imageService : ImageService) { }
 
@@ -29,6 +28,14 @@ export class HomeComponent implements OnInit {
 
   onChangeHandler(e) {
     console.log(e)
+  }
+
+  getImages(q) {
+    this.imageService.getImages(q).then( images => {
+      this.images = images;
+    }).catch( err => {
+
+    });
   }
 
 }

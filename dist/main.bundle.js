@@ -213,7 +213,7 @@ module.exports = ""
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"text-center\">\n    <input #searchInput class=\"form-control\" placeholder=\"Search ...\" style=\"height: 60px;font-size: 25px;\">\n  </div>\n</div>\n\n<div class=\"photo-gallery\">\n  <div class=\"container\">\n    <div class=\"intro\">\n      <h2 class=\"text-center\">Upload your own pictures</h2>\n      <div class=\"text-center\">\n        <ngx-uploadcare-widget class=\"text-center\"\n                               images-only=\"true\"\n                               data-crop=\"free\"\n                               public-key=\"c49dd3401f80bb6419e1\"\n                               (on-upload-complete)=\"onUploadHandler($event)\"\n                               (on-change)=\"onChangeHandler($event)\">\n        </ngx-uploadcare-widget>\n      </div>\n    </div>\n\n    <div class=\"intro\">\n      <h2 class=\"text-center\">Gallery</h2>\n    </div>\n    <div class=\"row photos\">\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/desk.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/desk.jpg\"></a>\n      </div>\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/building.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/building.jpg\"></a>\n      </div>\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/loft.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/loft.jpg\"></a>\n      </div>\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/building.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/building.jpg\"></a>\n      </div>\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/loft.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/loft.jpg\"></a>\n      </div>\n      <div class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a href=\"assets/img/desk.jpg\" data-lightbox=\"photos\"><img class=\"img-responsive\" src=\"assets/img/desk.jpg\"></a>\n      </div>\n    </div>\n  </div>\n</div>\n<footer class=\"site-footer\">\n  <div class=\"container\">\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h5>S2TW ©</h5></div>\n      <div class=\"col-sm-6 social-icons\"><a href=\"#\"><i class=\"fa fa-facebook\"></i></a><a href=\"#\"><i class=\"fa fa-twitter\"></i></a><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></div>\n    </div>\n  </div>\n</footer>\n"
+module.exports = "\n<div class=\"photo-gallery\">\n  <div class=\"container\">\n\n    <div class=\"intro\">\n      <h2 class=\"text-center\">Upload your own pictures</h2>\n      <div class=\"text-center\">\n        <ngx-uploadcare-widget class=\"text-center\"\n                               images-only=\"true\"\n                               data-crop=\"free\"\n                               public-key=\"c49dd3401f80bb6419e1\"\n                               (on-upload-complete)=\"onUploadHandler($event)\"\n                               (on-change)=\"onChangeHandler($event)\">\n        </ngx-uploadcare-widget>\n      </div>\n    </div>\n\n    <div class=\"\" style=\"margin-bottom: 20px\">\n      <div class=\"text-center\" style=\"background-color: white\">\n        <div style=\"max-width: 970px;margin: 0 auto;height: 60px;font-size: 25px;\">\n          <input #searchInput (keyup.enter)=\"getImages(searchInput.value)\" class=\"form-control\" placeholder=\"Search ...\" style=\"max-width: 100%;height: 60px;font-size: 25px\">\n        </div>\n      </div>\n    </div>\n\n    <div class=\"row photos mt-3\">\n      <div *ngFor=\"let image of images\" class=\"col-lg-3 col-md-4 col-sm-6 item\">\n        <a><img class=\"img-responsive\" src=\"{{image.url}}\"></a>\n      </div>\n    </div>\n  </div>\n</div>\n<footer class=\"site-footer\">\n  <div class=\"container\">\n    <hr>\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h5>S2TW ©</h5></div>\n      <div class=\"col-sm-6 social-icons\"><a href=\"#\"><i class=\"fa fa-facebook\"></i></a><a href=\"#\"><i class=\"fa fa-twitter\"></i></a><a href=\"#\"><i class=\"fa fa-instagram\"></i></a></div>\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -253,6 +253,13 @@ var HomeComponent = (function () {
     };
     HomeComponent.prototype.onChangeHandler = function (e) {
         console.log(e);
+    };
+    HomeComponent.prototype.getImages = function (q) {
+        var _this = this;
+        this.imageService.getImages(q).then(function (images) {
+            _this.images = images;
+        }).catch(function (err) {
+        });
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -458,7 +465,7 @@ var ImageService = (function () {
             var contentHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
             contentHeaders.append('Accept', 'application/json');
             contentHeaders.append('Content-Type', 'application/json');
-            _this.http.get("https://s2tw.herokuapp.com/images?q=" + q, { headers: contentHeaders })
+            _this.http.get("/images?q=" + q, { headers: contentHeaders })
                 .map(function (res) { return res.json(); })
                 .catch(function (error) {
                 reject(error.json().error || 'Server error');

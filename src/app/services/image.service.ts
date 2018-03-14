@@ -17,7 +17,7 @@ export class ImageService {
         contentHeaders.append('Accept', 'application/json');
         contentHeaders.append('Content-Type', 'application/json');
 
-        this.http.get(`https://s2tw.herokuapp.com/images?q=${q}`, {headers: contentHeaders})
+        this.http.get(`/images?q=${q}`, {headers: contentHeaders})
           .map(res => res.json())
           .catch((error: any) => {
             reject(error.json().error || 'Server error');

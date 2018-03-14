@@ -12,39 +12,32 @@ const shutterstockapi = shutterstock.v2({
 const PixabayApi = require('node-pixabayclient');
 const PixabayPhotos = new PixabayApi({ apiUrl: "https://pixabay.com/api/" });
 
-var params = {
-  key: "8332018-35ddb371f35967e63a3b19f45",
-  q: "yellow flowers", // automatically URL-encoded
-  image_type: "photo",
-};
 
 const imageService = {
-  getImages: function getImages() {
+  getImages: function getImages(q) {
+    var params = {
+      key: "8332018-35ddb371f35967e63a3b19f45",
+      q: q, // automatically URL-encoded
+      image_type: "photo",
+    };
+
     return new Promise(function (resolve, reject) {
-      shutterstockapi.image.search('cars', function(err, data) {
-        if (err) {
-          throw reject(err);
+      PixabayPhotos.query(params, function(errors, res, req) {
+        if (errors) {
+          console.log('One or more errors were encountered:');
+          console.log('- ' + errors.join('\n- '));
+          return;
         }
-        console.log(data);
+        let images = { images : [] };
 
-        PixabayPhotos.query(params, function(errors, res, req) {
-          if (errors) {
-            console.log('One or more errors were encountered:');
-            console.log('- ' + errors.join('\n- '));
-            return;
-          }
+        for (let image of res.hits) {
+          images.images.push({
+            url : image.webformatURL,
+            id: image.id
+          })
+        }
 
-          console.log('Photos request:');
-          console.log(req);
-
-          console.log('Photos API response:');
-          console.log(res);
-
-          resolve(res);
-        });
-
-
-
+        resolve(images);
       });
     });
   }
