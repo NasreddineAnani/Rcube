@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build && git add . && git commit -m 'wesh' && git push"
+    "heroku-postbuild": "ng build",
+    "deploy": "git add . && git commit -m 'wesh' && git push"
   },
   "private": true,
   "dependencies": {

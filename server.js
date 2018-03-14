@@ -37,6 +37,13 @@ app.use(express.static(__dirname + '/dist'));
 app.use('/', usersController);
 app.use('/', imagesController);
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 app.listen(process.env.PORT || 8080);
 console.log('Server ', process.env.PORT || 8080)
