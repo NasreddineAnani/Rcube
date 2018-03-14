@@ -9,7 +9,9 @@ import { ImageService } from '../services/image.service';
 })
 export class HomeComponent implements OnInit {
 
-  images : any = [];
+  images: any = [];
+  search: boolean = false;
+  searchInput: string;
 
   constructor( private imageService : ImageService) { }
 
