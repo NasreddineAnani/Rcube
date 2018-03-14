@@ -1,0 +1,20 @@
+{
+  "dev":
+  {
+    "apiKey": "AIzaSyBaQlmeBsMYHQfV8pwdicDmmKug-T0wE14",
+    "authDomain": "s2tw-dev.firebaseapp.com",
+    "databaseURL": "https://s2tw-dev.firebaseio.com",
+    "projectId": "s2tw-dev",
+    "storageBucket": "s2tw-dev.appspot.com",
+    "messagingSenderId": "424462100210"
+  },
+  "prod" :
+  {
+    "apiKey": "AIzaSyBl1dxUSJOgzKMXW-v-7GbEm1_mHcpeyGo",
+    "authDomain": "s2tw-prod.firebaseapp.com",
+    "databaseURL": "https://s2tw-prod.firebaseio.com",
+    "projectId": "s2tw-prod",
+    "storageBucket": "s2tw-prod.appspot.com",
+    "messagingSenderId": "244365413072"
+  }
+}

@@ -1,0 +1,50 @@
+<div class="photo-gallery">
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Upload</h2>
+      <div class="text-center">
+        <ngx-uploadcare-widget class="text-center"
+                               images-only="true"
+                               data-crop="free"
+                               public-key="c49dd3401f80bb6419e1"
+                               (on-upload-complete)="onUploadHandler($event)"
+                               (on-change)="onChangeHandler($event)">
+        </ngx-uploadcare-widget>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h2 class="text-center">Gallery</h2>
+    </div>
+    <div class="row photos">
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/desk.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/desk.jpg"></a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/building.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/building.jpg"></a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/loft.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/loft.jpg"></a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/building.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/building.jpg"></a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/loft.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/loft.jpg"></a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 item">
+        <a href="assets/img/desk.jpg" data-lightbox="photos"><img class="img-responsive" src="assets/img/desk.jpg"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <h5>S2TW ©</h5></div>
+      <div class="col-sm-6 social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+    </div>
+  </div>
+</footer>
