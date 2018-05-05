@@ -35,10 +35,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getNextStep(categorie) {
-    if(!categorie.reuse) {
-      this.currentCategorie = categorie;
-      //this.step = this.currentCategorie.nextStep;
-      this.step = 3;
-    }
+    this.currentCategorie = categorie;
+    this.step = this.currentCategorie.nextStep;
   }
 }
