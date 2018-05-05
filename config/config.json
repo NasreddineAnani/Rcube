@@ -16,5 +16,12 @@
     "projectId": "s2tw-prod",
     "storageBucket": "s2tw-prod.appspot.com",
     "messagingSenderId": "244365413072"
+  },
+  "ok" : {
+    "apiKey": "AIzaSyCB6K2bD6g-pKIm2AMGSsV1ddFw-K5TEl4",
+    "authDomain": "lilium-cms-f4f84.firebaseapp.com",
+    "databaseURL": "https://lilium-cms-f4f84.firebaseio.com",
+    "storageBucket": "gs://lilium-cms-f4f84.appspot.com",
+    "messagingSenderId": "189273427311"
   }
 }

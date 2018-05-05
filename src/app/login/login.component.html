@@ -1,22 +1,22 @@
-<div class="login-wrapper ">
+<div *ngIf="false" class="login-wrapper ">
 
   <div class="bg-pic">
 
-    <img src="https://images.unsplash.com/photo-1433574466251-fe1be0d9b3d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8059e118396db74fbfea534f808c5c6f&auto=format&fit=crop&w=2851&q=80" data-src="https://images.unsplash.com/photo-1433574466251-fe1be0d9b3d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8059e118396db74fbfea534f808c5c6f&auto=format&fit=crop&w=2851&q=80" data-src-retina="https://images.unsplash.com/photo-1433574466251-fe1be0d9b3d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8059e118396db74fbfea534f808c5c6f&auto=format&fit=crop&w=2851&q=80" alt="" class="lazy">
+    <img src="assets/img/icons_faded.png" data-src="assets/img/icons_faded.png" data-src-retina="assets/img/icons_faded.png" alt="" class="lazy">
 
   </div>
 
   <div class="login-container bg-white">
     <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-      <img src="assets/img/logo_2x.png" alt="logo" data-src="assets/img/logo_2x.png" data-src-retina="assets/img/logo_2x.png" width="78" height="78">
+
       <p class="p-t-35">Sign into your pages account</p>
 
       <form id="form-login" class="p-t-15" role="form"  novalidate="novalidate">
 
         <div class="form-group form-group-default">
-          <label>Login</label>
+          <label>Email</label>
           <div class="controls">
-            <input type="text" name="username" placeholder="Email" class="form-control" required="" aria-required="true">
+            <input #email type="text" name="username" placeholder="Email" class="form-control" required="" aria-required="true">
           </div>
         </div>
 
@@ -24,11 +24,11 @@
         <div class="form-group form-group-default">
           <label>Password</label>
           <div class="controls">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="" aria-required="true">
+            <input #password type="password" class="form-control" name="password" placeholder="Password" required="" aria-required="true">
           </div>
         </div>
 
-        <button class="btn btn-primary btn-cons m-t-10">Sign in</button>
+        <button (click)="login(email.value, password.value)" class="btn btn-primary btn-cons m-t-10">Sign in</button>
       </form>
 
       <div class="pull-bottom sm-pull-bottom">
@@ -41,4 +41,34 @@
     </div>
   </div>
 
+</div>
+
+
+<div class="container-fluid" id="wrapper">
+  <div class="row">
+    <main class="col-xs-10 col-sm-8 col-md-4 m-auto ">
+      <div class="login-panel card mt-5">
+        <div class="card-block">
+          <h3 class="card-title text-center mt-1">Login</h3>
+          <div class="divider mt-0"></div>
+          <form role="form">
+            <fieldset>
+              <div class="form-group">
+                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+              </div>
+              <div class="checkbox mt-1 mb-2">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Remember me</span></label>
+              </div>
+              <div class="text-center"><a  class="btn btn-lg btn-primary">Login</a></div></fieldset>
+          </form></div>
+
+
+      </div>
+    </main>
+  </div>
 </div>

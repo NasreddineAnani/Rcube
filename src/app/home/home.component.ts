@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageService } from '../services/image.service';
-
+import { AuthService } from '../services/auth.service';
+import { UsersService } from '../services/users.service';
+import { LinksService } from '../services/links.service';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -9,32 +11,34 @@ import { ImageService } from '../services/image.service';
 })
 export class HomeComponent implements OnInit {
 
-  images: any = [];
-  search: boolean = false;
-
-  constructor( private imageService : ImageService) { }
+  empty: boolean;
+  loading: boolean = false;
+  username: any;
+  user: any;
+  links: any = [];
+  url: string;
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private linksService: LinksService,
+              private usersService: UsersService) { }
 
   ngOnInit() {
-    this.imageService.getImages('cars').then( images => {
-      this.images = images;
-    }).catch( err => {
+    this.empty = false;
+    this.loading = true;
 
-    });
-  }
+    this.route.params.subscribe(params => {
+      this.username = params['id'];
 
-  onUploadHandler(e) {
-    console.log(e)
-  }
-
-  onChangeHandler(e) {
-    console.log(e)
-  }
-
-  getImages(q) {
-    this.imageService.getImages(q).then( images => {
-      this.images = images;
-    }).catch( err => {
-
+      this.usersService.getUserByUsername(this.username).then( res => {
+        if((<any>res).length == 0){
+          this.loading = false;
+          this.empty = true;
+        } else {
+          this.user = (<any>res)[0];
+        }
+      }).catch(err => {
+        console.log(err);
+      });
     });
   }
 

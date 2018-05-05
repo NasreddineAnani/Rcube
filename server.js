@@ -3,10 +3,13 @@ console.log('Execution environment:' + process.env.NODE_ENV);
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const path = require('path');
 const config = require('./config/config.json');
 const firebase = require('firebase');
 const admin = require('firebase-admin');
+
+app.use(bodyParser.json());
 
 var serviceAccountPath = `./config/serviceAccountKey_${process.env.NODE_ENV}.json`;
 var serviceAccount = require(serviceAccountPath);
@@ -29,13 +32,13 @@ const forceSSL = function() {
 }
 
 const usersController = require('./backend/controller/usersController.js');
-const imagesController = require('./backend/controller/imageController.js');
+const itemsController = require('./backend/controller/itemsController.js');
 
 // ForceSSL middleware
 // app.use(forceSSL());
 app.use(express.static(__dirname + '/dist'));
 app.use('/', usersController);
-app.use('/', imagesController);
+app.use('/', itemsController);
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');

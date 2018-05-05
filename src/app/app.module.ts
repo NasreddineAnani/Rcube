@@ -14,24 +14,27 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthGuard } from './services/authGuard.service';
 import { AuthService } from './services/auth.service';
-import { ImageService } from './services/image.service';
+import { LinksService } from './services/links.service';
+import { UsersService } from './services/users.service';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 export const firebaseConfig = {
-  "apiKey": "AIzaSyBaQlmeBsMYHQfV8pwdicDmmKug-T0wE14",
-  "authDomain": "s2tw-dev.firebaseapp.com",
-  "databaseURL": "https://s2tw-dev.firebaseio.com",
-  "projectId": "s2tw-dev",
-  "storageBucket": "s2tw-dev.appspot.com",
-  "messagingSenderId": "424462100210"
+  apiKey: "AIzaSyCq5K8mLvTVakYFXLBGiPVaEafA0W5tIJc",
+  authDomain: "rcube-7b19f.firebaseapp.com",
+  databaseURL: "https://rcube-7b19f.firebaseio.com",
+  projectId: "rcube-7b19f",
+  storageBucket: "rcube-7b19f.appspot.com",
+  messagingSenderId: "930082734432"
 };
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'dashboard', component: HomeComponent, canActivate: [AuthGuard]},
-  { path: 'login', component: LoginComponent }
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: SignupComponent }
 ];
 
 
@@ -41,7 +44,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    UcWidgetComponent
+    UcWidgetComponent,
+    SignupComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
@@ -54,7 +58,8 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthService,
-    ImageService
+    LinksService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })

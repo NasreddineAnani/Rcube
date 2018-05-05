@@ -14,13 +14,16 @@ export class AuthService {
 
   }
 
+  currentUser() {
+    return this.af.auth.currentUser;
+  }
+
   login(email, password) {
-    return this.af.auth.signInWithEmailAndPassword(email, password)
-      .then((res) => {
-        console.log(res);
-      }).catch(err => {
-        console.log(err);
-      })
+    return this.af.auth.signInWithEmailAndPassword(email, password);
+  }
+
+  register(email, password) {
+    return this.af.auth.createUserAndRetrieveDataWithEmailAndPassword(email, password);
   }
 
   signOut() {

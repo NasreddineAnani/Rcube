@@ -7,6 +7,7 @@ var router = express.Router();
 var db = admin.firestore();
 
 router.post('/users', function (req, res) {
+    console.log(req.body);
     db.collection("users").add(req.body).then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
         res.status(200).send({"id": docRef.id});
@@ -24,7 +25,7 @@ router.get('/users', function (req, res) {
     var researchTerm = req.query.email;
 
     if(username) {
-        var researchBy = 'username';
+        var researchBy = 'displayName';
         var researchTerm = req.query.username;
     }
 
