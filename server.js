@@ -33,12 +33,14 @@ const forceSSL = function() {
 
 const usersController = require('./backend/controller/usersController.js');
 const itemsController = require('./backend/controller/itemsController.js');
+const centersController = require('./backend/controller/centersController.js');
 
 // ForceSSL middleware
 // app.use(forceSSL());
 app.use(express.static(__dirname + '/dist'));
 app.use('/', usersController);
 app.use('/', itemsController);
+app.use('/', centersController);
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
