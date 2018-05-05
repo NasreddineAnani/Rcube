@@ -14,3 +14,9 @@ agm-map {
   max-height: 200px;
   overflow: hidden;
 }
+
+hr.style1{
+  border-top: 1px solid #8c8b8b;
+  width:40px;
+  border:20px;
+}

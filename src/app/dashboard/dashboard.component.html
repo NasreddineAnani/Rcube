@@ -15,6 +15,7 @@
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Sélectionner</h1>
+
           <p class="lead text-muted">Comment souhaitez-vous recycler aujourd'hui ?</p>
         </div>
       </div>
@@ -22,24 +23,31 @@
         <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
         <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success" role="button">Chercher</button>
       </div>
+
+
       <div class="row">
         <div class="card col m-3 text-center">
           <div class="card-body">
             <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
-            <h3>Trouver la meilleur façon de disposer de vos objets</h3>
+            <h2>Trouver la façon la plus écologique <br>
+              de disposer de vos déchets, matériaux et articles réutilisables</h2>
           </div>
         </div>
 
         <div class="card col m-3 text-center">
           <div class="card-body">
             <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success text-center" role="button">Chercher</button>
-            <h3>Voir les différents objets à donner</h3>
+            <h2>Découvrir les différents articles <br>
+              à donner dans votre région</h2>
           </div>
       </div>
     </div>
+
+
+  </div>
   </div>
 
-  <section *ngIf="step === 1" class="row category animated slideInRight">
+  <section *ngIf="step == 1" class="row category animated slideInRight">
     <div class="col-12 card w-90 p-3">
       <h1>Jeter ou donner</h1>
       <div class="jumbotron text-center">
