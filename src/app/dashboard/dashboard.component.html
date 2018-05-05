@@ -24,8 +24,8 @@
         <div class="card col m-3 text-center h-100 shadow border-0">
           <div class="card-body">
             <img (click)="redirectHome()" src="../../assets/img/logo.svg" class="logoStyle m-4">
-            <h4 class="m-4">Trouver la façon la plus écologique <br>
-              de disposer de vos déchets, matériaux et articles réutilisables</h4>
+            <h5 class="m-4">Trouver la façon la plus écologique <br>
+              de disposer de vos déchets ou articles réutilisables</h5>
             <div class="text-center">
               <button (click)="step = 1" class="btn btn-lg btn-success m-4 w-50 text-center" role="button">Jeter ou donner</button>
             </div>
@@ -35,9 +35,9 @@
         <div class="card col m-3 text-center h-100 shadow border-0">
           <div class="card-body ">
             <img (click)="redirectHome()" src="../../assets/img/logo.svg" class="logoStyle m-4">
-            <h4 class="m-4">Découvrir les différents articles <br>
-              réutilisable à donner près de chez vous
-            </h4>
+            <h5 class="m-4">Découvrir une panoplie d'articles différents
+              réutilisables à donner près de chez vous
+            </h5>
             <div class="text-center">
               <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success m-4 w-50 text-center" role="button">Chercher</button>
             </div>
@@ -54,6 +54,7 @@
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
+          <hr class="style14">
           <p class="lead text-muted">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>
         </div>
       </div>
@@ -78,19 +79,19 @@
   </section>
 
   <!--ecocentre-->
-  <section *ngIf="step == 2" class="row category animated fadeIn">
-    <div class="col-12 card w-90 p-3 shadow" style="">
+  <section *ngIf="step == 2" class="category animated slideInRight">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
+          <hr class="style14">
           <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez
             vous.</p>
         </div>
       </div>
 
-      <div class="py-5 bg-light">
-        <div class="container">
-          <div class="row">
+      <div class="card col-12 text-center shadow border-0">
+        <div class="card-body container row">
             <div class="col-md-6">
               <div style="padding-left: 0.5em">
                 <p class="titre"> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
@@ -117,7 +118,6 @@
 
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
