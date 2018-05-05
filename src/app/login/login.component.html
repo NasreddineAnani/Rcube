@@ -2,20 +2,20 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6 text-center">
-      <h4 class="mb-3">Login</h4>
+      <h4 class="mb-3">Se connecter</h4>
       <form>
 
         <div class="mb-3">
           <label for="username">Adresse Courriel</label>
-          <input type="text" class="form-control" id="username" required="">
+          <input #email type="text" class="form-control" id="username" required="">
         </div>
 
         <div class="mb-3">
-          <label for="username">Mot de passe</label>
-          <input type="text" class="form-control" id="password" required="">
+          <label for="password">Mot de passe</label>
+          <input #password type="password" class="form-control" id="password" required="">
         </div>
 
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Se connecter</button>
+        <button (click)="login(email.value, password.value)" class="btn btn-primary btn-lg btn-block" type="submit">Se connecter</button>
       </form>
     </div>
     <div class="col-md-3"></div>

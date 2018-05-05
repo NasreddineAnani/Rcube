@@ -14,14 +14,17 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthGuard } from './services/authGuard.service';
 import { AuthService } from './services/auth.service';
-import { LinksService } from './services/links.service';
+import { ItemsService } from './services/items.service';
 import { UsersService } from './services/users.service';
+import { CentersService } from './services/centers.service';
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCq5K8mLvTVakYFXLBGiPVaEafA0W5tIJc",
@@ -36,7 +39,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: SignupComponent }
+  { path: 'register', component: RegisterComponent }
 ];
 
 
@@ -57,13 +60,15 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    GooglePlaceModule
   ],
   providers: [
     AuthGuard,
     AuthService,
-    LinksService,
-    UsersService
+    ItemsService,
+    UsersService,
+    CentersService
   ],
   bootstrap: [AppComponent]
 })
