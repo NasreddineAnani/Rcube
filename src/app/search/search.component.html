@@ -2,6 +2,10 @@
 
   <section *ngIf="step === 1" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow border-0">
+      <div>
+        <button [routerLink]="['/dashboard']" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
+
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
