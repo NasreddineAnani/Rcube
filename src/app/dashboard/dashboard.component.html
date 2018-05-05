@@ -11,9 +11,6 @@
   </div>
 
   <div *ngIf="step === 0" class="pt-2 row animated slideInRight">
-    <div class="col-2">
-
-    </div>
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
@@ -80,8 +77,8 @@
   </section>
 
   <!--ecocentre-->
-  <section *ngIf="step == 2" class="row category animated slideInRight">
-    <div class="col-12 card w-90 p-3 shadow" style="">
+  <section *ngIf="step == 2" class="category animated slideInRight">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
@@ -90,9 +87,8 @@
         </div>
       </div>
 
-      <div class="card py-5 bg-light">
-        <div class="card-body container">
-          <div class="row">
+      <div class="card col-12 text-center shadow border-0">
+        <div class="card-body container row">
             <div class="col-md-6">
               <div style="padding-left: 0.5em">
                 <p class="titre"> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
@@ -119,7 +115,6 @@
 
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
