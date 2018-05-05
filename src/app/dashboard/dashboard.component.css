@@ -14,3 +14,11 @@ agm-map {
   max-height: 200px;
   overflow: hidden;
 }
+
+.label-form {
+  font-size: 1.2em;
+}
+
+.titre {
+  font-size: x-large;
+}
