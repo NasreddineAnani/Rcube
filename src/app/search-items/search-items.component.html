@@ -9,15 +9,15 @@
       <div class="row pl-4">
 
         <div class="col-12 col-md-4">
-          <div class="card m-2 box-shadow">
-            <img class="card-img-top img-item" src="https://images.pexels.com/photos/128639/pexels-photo-128639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          <div *ngFor="let item of items" class="card m-2 box-shadow">
+            <img class="card-img-top img-item" src="{{item.image}}" alt="{{item.title}}" />
             <div class="card-body">
-              <h4> Nom du produit </h4>
-              <h5><i class="fa fa-map-marker" aria-hidden="true"> Adresse user</i></h5>
+              <h4> {{item.title}} </h4>
+              <h5><i class="fa fa-map-marker" aria-hidden="true">  {{item.address}} </i></h5>
             </div>
           </div>
         </div>
-
+<!--
         <div class="col-12 col-md-4">
           <div class="card m-2 box-shadow">
             <img class="card-img-top img-item" src="https://images.pexels.com/photos/128639/pexels-photo-128639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
@@ -67,6 +67,8 @@
             </div>
           </div>
         </div>
+
+        -->
 
       </div>
     </div>
