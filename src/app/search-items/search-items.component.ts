@@ -15,6 +15,7 @@ import { SearchCategoriesService } from '../services/search-categories.service';
 })
 export class SearchItemsComponent implements OnInit {
 
+  currentItem: any;
   items: any;
 
   constructor(
