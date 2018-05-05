@@ -34,7 +34,7 @@ export const firebaseConfig = {
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent }
 ];

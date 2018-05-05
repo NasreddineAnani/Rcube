@@ -123,7 +123,7 @@ var firebaseConfig = {
 };
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_15__dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__services_authGuard_service__["a" /* AuthGuard */]] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_15__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_16__signup_signup_component__["a" /* SignupComponent */] }
 ];
@@ -176,7 +176,7 @@ module.exports = ""
 /***/ "./src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>work</p>\n"
+module.exports = "<div class=\"jumbotron\">\n  <h1>Jumbotron heading</h1>\n  <p class=\"lead\">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <p><a class=\"btn btn-lg btn-success\" href=\"#\" role=\"button\">Jeter/Donner</a></p>\n    </div>\n    <div class=\"col-md-6\">\n      <p><a class=\"btn btn-lg btn-success\" href=\"#\" role=\"button\">Chercher</a></p>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
