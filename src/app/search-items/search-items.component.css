@@ -1,3 +1,10 @@
 .itemsMap {
-  height: 88vh;
+  height: 72vh;
 }
+
+.img-item {
+  object-fit: cover;
+  max-height: 200px;
+  overflow: hidden;
+}
+

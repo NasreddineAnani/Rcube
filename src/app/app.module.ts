@@ -18,6 +18,7 @@ import { ItemsService } from './services/items.service';
 import { UsersService } from './services/users.service';
 import { CentersService } from './services/centers.service';
 import { CategoriesService } from './services/categories.service';
+import { SearchCategoriesService } from './services/search-categories.service';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,7 +26,10 @@ import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 
+
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { SearchComponent } from './search/search.component';
+import { SearchItemsComponent } from './search-items/search-items.component';
 import { AgmCoreModule } from '@agm/core';
 
 export const firebaseConfig = {
@@ -41,7 +45,9 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'searchItems', component: SearchItemsComponent }
 ];
 
 
@@ -54,7 +60,9 @@ const appRoutes: Routes = [
     UcWidgetComponent,
     SignupComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent,
+    SearchItemsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
@@ -74,7 +82,8 @@ const appRoutes: Routes = [
     ItemsService,
     UsersService,
     CentersService,
-    CategoriesService
+    CategoriesService,
+    SearchCategoriesService
   ],
   bootstrap: [AppComponent]
 })
