@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { UsersService } from '../services/users.service';
-import { LinksService } from '../services/links.service';
-import {ActivatedRoute, Router} from "@angular/router";
+import { ItemsService } from '../services/items.service';
+import { ActivatedRoute, Router } from "@angular/router";
+import { CategoriesService } from '../services/categories.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -11,17 +13,24 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
 
+  categories: any[] = [];
+
+  selection: any;
+  step: any;
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private usersService: UsersService,
-    private linksService: LinksService
+    private itemsService: ItemsService,
+    private categoriesService: CategoriesService
 
   ) { }
 
   ngOnInit() {
-
+    this.categories = this.categoriesService.getCategories();
+    this.step = 0;
 
   }
 }

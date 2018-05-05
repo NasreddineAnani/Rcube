@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { UsersService } from '../services/users.service';
-import { LinksService } from '../services/links.service';
+import { ItemsService } from '../services/items.service';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   url: string;
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private linksService: LinksService,
+              private itemsService: ItemsService,
               private usersService: UsersService) { }
 
   ngOnInit() {
