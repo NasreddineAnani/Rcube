@@ -48,7 +48,8 @@
       </div>
   </div>
   </div>
-  <section *ngIf="step == 1" class="row category animated slideInRight">
+
+  <section *ngIf="step == 1" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow border-0">
       <h1>Jeter ou donner</h1>
       <div class="jumbotron text-center">
@@ -79,7 +80,7 @@
   </section>
 
   <!--ecocentre-->
-  <section *ngIf="step == 2" class="category animated slideInRight">
+  <section *ngIf="step == 2" class="category animated fadeIn">
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
@@ -124,7 +125,7 @@
   </section>
 
   <!--  book-->
-  <section *ngIf="step == 3" class="row category animated slideInRight">
+  <section *ngIf="step == 3" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow border-0">
       <div class="jumbotron text-center">
         <div class="container">
@@ -145,7 +146,7 @@
               <div class="form-group row">
                 <label for="example-date-input" class="col-12 col-form-label">Date de prise en charge à votre domicile</label>
                 <div class="col-12">
-                  <input class="form-control" type="date" value="2018-05-06" id="example-date-input">
+                  <input #date class="form-control" type="date" value="2018-05-06" id="example-date-input">
                 </div>
               </div>
 
@@ -171,11 +172,6 @@
                   </div>
                 </div>
 
-
-                <div class="mb-3">
-                  <label for="serviceDate">Date de prise en charge à votre domicile</label>
-                  <input  #date type="date" id="serviceDate">
-                </div>
                 <button (click)="bookPickUp(date.value)" class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
               </form>
             </div>
