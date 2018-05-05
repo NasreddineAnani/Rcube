@@ -110,7 +110,12 @@
           </div>
           <div class="col-md-6">
             <div class="card mb-4 box-shadow">
-              <div id="map" style="width:100%;height:400px;"></div>
+              <div id="map" style="width:100%;height:400px;">
+                <agm-map [latitude]="lat" [longitude]="lng">
+                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+              </div>
+
             </div>
           </div>
         </div>
