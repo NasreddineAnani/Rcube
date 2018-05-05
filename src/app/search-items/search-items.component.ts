@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
+
+import { AuthService } from '../services/auth.service';
+import { UsersService } from '../services/users.service';
+import { ItemsService } from '../services/items.service';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { SearchCategoriesService } from '../services/search-categories.service';
 
 @Component({
   selector: 'app-search-items',
@@ -7,9 +15,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchItemsComponent implements OnInit {
 
-  constructor() { }
+  items: any;
+
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private usersService: UsersService,
+    private itemsService: ItemsService,
+    private categoriesService: SearchCategoriesService,
+    private activatedRoute: ActivatedRoute,
+    private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit() {
+    let categories = this.route.snapshot.queryParams["categories"];
+    this.itemsService.getItemsByCategorie(categories).then(res => {
+      for(let item of res['items']) {
+      }
+      this.items = res['items'];
+      console.log(this.items);
+    })
+
   }
+
 
 }

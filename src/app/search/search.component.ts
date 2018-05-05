@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
   }
 
   getItemCategorie(searchCategories) {
-    this.router.navigate(['searchItems']);
+    this.router.navigate(['searchItems'], { queryParams: { categories: searchCategories.name } });
   }
 
 }

@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
   imageItem: any;
+  categorie: any;
 
   constructor(
     private authService: AuthService,
@@ -77,12 +78,17 @@ export class DashboardComponent implements OnInit {
     this.itemsService.postItems({
       title: titleItem,
       description: descriptionItem,
-      image: this.imageItem
+      image: this.imageItem,
+      categories: this.categorie
     });
     this.alert = "Votre objet a été ajouté au objets a donner !";
     setTimeout(() => {
       this.alert = "";
     }, 4000);
     this.step = 0;
+  }
+
+  onUpload(info) {
+    this.imageItem = info.originalUrl;
   }
 }
