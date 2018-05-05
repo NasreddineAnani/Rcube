@@ -1,9 +1,7 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4  bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-normal"><img src="../../assets/img/logo.png" style="height: 50px;"></h5>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4">
+  <h5 class="my-0 mr-md-auto font-weight-normal"><img src="../../assets/img/logo.svg" class="logoStyle"></h5>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a [routerLink]="['/register']" *ngIf="!isLogged" class="p-2 text-dark" >S'enregistrer</a>
-    <a *ngIf="isLogged" class="p-2 text-dark" >{{currentUser.email}}</a>
+    <a [routerLink]="['/register']" class="p-2 btn btn-outline-primary buttonColor" >S'enregistrer</a>
   </nav>
-  <a [routerLink]="['/login']" *ngIf="!isLogged" class="btn btn-outline-primary" >Se connecter</a>
-  <a (click)="logout()" *ngIf="isLogged" class="btn btn-outline-primary" >Se déconnecter</a>
+  <a [routerLink]="['/login']" class="btn btn-outline-primary buttonColor" >Se connecter</a>
 </div>

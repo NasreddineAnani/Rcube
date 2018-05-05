@@ -5,8 +5,8 @@
   background-color: transparent;
   position: relative;
   display: table;
-  background-size: contain;
-  /*background-image: url(https://images.unsplash.com/photo-1518563259479-d003c05a6507?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b5e8bea2f4b8f51eb5d71b9ba1d7e74c&auto=format&fit=crop&w=2250&q=80);*/
+  background-size: cover;
+  background-image: url(../../assets/img/background.svg);
 }
 
 .s-home .shadow-overlay {
@@ -43,5 +43,6 @@
 }
 
 .home-content__main {
-  margin-top: 20%;
+  margin-top: 18%;
+  margin-left: 10vh;
 }
