@@ -124,6 +124,48 @@
   </div>
 </section>
 
+  <section *ngIf="step == 3" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3" style="">
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Service de prise en charge</h1>
+          <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>
+        </div>
+      </div>
+
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <p> La prochaine collecte sera effectué :</p>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                  <div><p> Heures d'ouverture</p></div>
+                  <div><hr></div>
+                  <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 box-shadow">
+                <div id="map" style="width:100%;height:400px;">
+                  <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                  </agm-map>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </div>
 
