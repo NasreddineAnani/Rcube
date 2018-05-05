@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<section *ngIf="step == 1" class="row category animated slideInRight">
+<section *ngIf="step === 1" class="row category animated slideInRight">
   <div class="col-12 card w-90 p-3">
     <div class="jumbotron text-center">
       <div class="container">
@@ -27,115 +27,10 @@
     <div class="py-5 bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
+          <div *ngFor="let cat of categories" class="col-md-3">
+            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
               <div class="card-body">
-                <p> Appareils électroniques </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Pneus </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Huiles et peinture </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div (click)="step = serviceUnavailable" class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Électroménagers </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Métal </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Bois </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Ordures ménagère </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Bac de recyclage </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Résidus vert </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Déchets encombrants </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Vêtements et accessoires </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Meubles </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Jouets </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Articles de Sport </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Électroménagers </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Autres </p>
+                <p> {{cat.name}} </p>
               </div>
             </div>
           </div>
@@ -143,6 +38,32 @@
       </div>
     </div>
   </div>
+</section>
+
+<section *ngIf="step === 2" class="row category animated slideInRight">
+    <div class="card">
+      <div class="card-header">
+        Objet à donner
+      </div>
+      <div class="card-group card-body col-12">
+          <div class="row">
+            <div class="card col-6">
+              <h5 class="card-title">Titre objet</h5>
+              <div class="card-body">
+              <p class="card-text">Description de l'objet Lorem ipsum dolor sit amet, metus mollit magnis, non cras porta nulla ac, diam sed neque tellus felis tortor, in massa tortor. Sagittis sed, massa luctus augue lacus penatibus massa sed. Enim lobortis sollicitudin sodales velit metus, sociosqu nunc, massa in, nullam id ut urna vulputate. Mus tristique, lectus fusce, vitae enim magna magna mi pellentesque, litora nunc. Scelerisque commodo, quisque tempor, amet nonummy, lorem odio velit pellentesque mattis. Praesent at rutrum congue senectus, gravida faucibus id posuere velit, aliquet ut duis nec proin sed, aenean pede sem morbi vestibulum tempor. A nonummy eget in, cum eleifend duis lobortis ultricies nullam, vestibulum lectus et lectus. Velit orci, tellus sit mollis, adipiscing in molestias ut nam nullam pellentesque, dolor volutpat id mattis ante leo ut, mattis risus velit. Sem sapien velit habitant ac, tempus elit suspendisse commodo justo nulla sit, leo adipiscing per cum nec viverra at.</p>
+              </div>
+            </div>
+            <div class="card col-6 img-container text-center">
+              <div class="card-body">
+              <img class="product-img img-responsive" src="https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg">
+              </div>
+            </div>
+          </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary">Récuperer l'article</button>
+        </div>
+      </div>
+    </div>
 </section>
 
 <!--<section class="row objectList">-->
@@ -282,3 +203,4 @@
 
 
 </div>
+

@@ -85,18 +85,20 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_items_service__ = __webpack_require__("./src/app/services/items.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_users_service__ = __webpack_require__("./src/app/services/users.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_centers_service__ = __webpack_require__("./src/app/services/centers.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__dashboard_dashboard_component__ = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__signup_signup_component__ = __webpack_require__("./src/app/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__register_register_component__ = __webpack_require__("./src/app/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_google_places_autocomplete__ = __webpack_require__("./node_modules/ngx-google-places-autocomplete/bundles/ngx-google-places-autocomplete.umd.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_google_places_autocomplete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_ngx_google_places_autocomplete__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_categories_service__ = __webpack_require__("./src/app/services/categories.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__dashboard_dashboard_component__ = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__signup_signup_component__ = __webpack_require__("./src/app/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__register_register_component__ = __webpack_require__("./src/app/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ngx_google_places_autocomplete__ = __webpack_require__("./node_modules/ngx-google-places-autocomplete/bundles/ngx-google-places-autocomplete.umd.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ngx_google_places_autocomplete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ngx_google_places_autocomplete__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -128,9 +130,9 @@ var firebaseConfig = {
 };
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_16__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_17__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_19__register_register_component__["a" /* RegisterComponent */] }
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_20__register_register_component__["a" /* RegisterComponent */] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -141,11 +143,11 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__dashboard_dashboard_component__["a" /* DashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_7_ngx_uploadcare_widget__["UcWidgetComponent"],
-                __WEBPACK_IMPORTED_MODULE_17__signup_signup_component__["a" /* SignupComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__register_register_component__["a" /* RegisterComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__signup_signup_component__["a" /* SignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__register_register_component__["a" /* RegisterComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: true }),
@@ -154,14 +156,15 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_5_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
                 __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["b" /* AngularFireAuthModule */],
-                __WEBPACK_IMPORTED_MODULE_20_ngx_google_places_autocomplete__["GooglePlaceModule"]
+                __WEBPACK_IMPORTED_MODULE_21_ngx_google_places_autocomplete__["GooglePlaceModule"]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_11__services_authGuard_service__["a" /* AuthGuard */],
                 __WEBPACK_IMPORTED_MODULE_12__services_auth_service__["a" /* AuthService */],
                 __WEBPACK_IMPORTED_MODULE_13__services_items_service__["a" /* ItemsService */],
                 __WEBPACK_IMPORTED_MODULE_14__services_users_service__["a" /* UsersService */],
-                __WEBPACK_IMPORTED_MODULE_15__services_centers_service__["a" /* CentersService */]
+                __WEBPACK_IMPORTED_MODULE_15__services_centers_service__["a" /* CentersService */],
+                __WEBPACK_IMPORTED_MODULE_16__services_categories_service__["a" /* CategoriesService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
         })
@@ -176,14 +179,14 @@ var AppModule = (function () {
 /***/ "./src/app/dashboard/dashboard.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".product-img {\n  -o-object-fit: contain;\n     object-fit: contain;\n  height: auto;\n  width: auto;\n  max-width: 400px;\n  max-height: 400px;\n}\n"
 
 /***/ }),
 
 /***/ "./src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"p-5\">\n<div *ngIf=\"step == 0\" class=\"row animated slideInRight\">\n  <div class=\"card col-12 w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Sélectionner</h1>\n        <p class=\"lead text-muted\">Comment souhaitez-vous recycler aujourd'hui ?</p>\n      </div>\n    </div>\n  <div class=\"card-body text-center\">\n    <button (click)=\"step = 1\" class=\"btn btn-lg btn-success\" role=\"button\">Jeter ou donner</button>\n    <button class=\"btn btn-lg btn-outline-success\" role=\"button\">Chercher</button>\n  </div>\n  </div>\n</div>\n\n<section *ngIf=\"step == 1\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Catégories</h1>\n        <p class=\"lead text-muted\">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Appareils électroniques </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Pneus </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Huiles et peinture </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div (click)=\"step = serviceUnavailable\" class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Électroménagers </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Métal </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Bois </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Ordures ménagère </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Bac de recyclage </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Résidus vert </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Déchets encombrants </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Vêtements et accessoires </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Meubles </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Jouets </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Articles de Sport </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Électroménagers </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-3\">\n            <div class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> Autres </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!--<section class=\"row objectList\">-->\n  <!--<div class=\"card w-90 p-3\">-->\n    <!--<div class=\"jumbotron text-center\">-->\n      <!--<div class=\"container\">-->\n        <!--<h1 class=\"jumbotron-heading\">Liste d'objet</h1>-->\n        <!--<p class=\"lead text-muted\">Veuillez choisir l'objet que souhaitez obtenir</p>-->\n      <!--</div>-->\n    <!--</div>-->\n\n    <!--<div class=\"py-5 bg-light\">-->\n      <!--<div class=\"container\">-->\n\n        <!--<div class=\"row\">-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\" style=\"height: 10%;width: 10%\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Appareils électroniques </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Pneus </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Huiles et peinture </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Électroménagers </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Métal </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bois </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Ordures ménagère </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bac de recyclage </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Résidus vert </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-12 text-center\">-->\n                <!--<p> Autres </p>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</section>-->\n\n<section *ngIf=\"step == serviceUnavailable\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\" style=\"\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Service de prise en charge</h1>\n        <p class=\"lead text-muted\">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div>\n              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Coordonnées</p></div>\n                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>\n              </div>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Heures d'ouverture</p></div>\n                <div><hr></div>\n                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"card mb-4 box-shadow\">\n              <div id=\"map\" style=\"width:100%;height:400px;\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n</div>\n"
+module.exports = "\n<div class=\"p-5\">\n<div *ngIf=\"step == 0\" class=\"row animated slideInRight\">\n  <div class=\"card col-12 w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Sélectionner</h1>\n        <p class=\"lead text-muted\">Comment souhaitez-vous recycler aujourd'hui ?</p>\n      </div>\n    </div>\n  <div class=\"card-body text-center\">\n    <button (click)=\"step = 1\" class=\"btn btn-lg btn-success\" role=\"button\">Jeter ou donner</button>\n    <button class=\"btn btn-lg btn-outline-success\" role=\"button\">Chercher</button>\n  </div>\n  </div>\n</div>\n\n<section *ngIf=\"step === 1\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Catégories</h1>\n        <p class=\"lead text-muted\">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div *ngFor=\"let cat of categories\" class=\"col-md-3\">\n            <div (click)=\"getNextStep(cat)\" class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> {{cat.name}} </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section *ngIf=\"step === 2\" class=\"row category animated slideInRight\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Objet à donner\n      </div>\n      <div class=\"card-group card-body col-12\">\n          <div class=\"row\">\n            <div class=\"card col-6\">\n              <h5 class=\"card-title\">Titre objet</h5>\n              <div class=\"card-body\">\n              <p class=\"card-text\">Description de l'objet Lorem ipsum dolor sit amet, metus mollit magnis, non cras porta nulla ac, diam sed neque tellus felis tortor, in massa tortor. Sagittis sed, massa luctus augue lacus penatibus massa sed. Enim lobortis sollicitudin sodales velit metus, sociosqu nunc, massa in, nullam id ut urna vulputate. Mus tristique, lectus fusce, vitae enim magna magna mi pellentesque, litora nunc. Scelerisque commodo, quisque tempor, amet nonummy, lorem odio velit pellentesque mattis. Praesent at rutrum congue senectus, gravida faucibus id posuere velit, aliquet ut duis nec proin sed, aenean pede sem morbi vestibulum tempor. A nonummy eget in, cum eleifend duis lobortis ultricies nullam, vestibulum lectus et lectus. Velit orci, tellus sit mollis, adipiscing in molestias ut nam nullam pellentesque, dolor volutpat id mattis ante leo ut, mattis risus velit. Sem sapien velit habitant ac, tempus elit suspendisse commodo justo nulla sit, leo adipiscing per cum nec viverra at.</p>\n              </div>\n            </div>\n            <div class=\"card col-6 img-container text-center\">\n              <div class=\"card-body\">\n              <img class=\"product-img img-responsive\" src=\"https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg\">\n              </div>\n            </div>\n          </div>\n        <div class=\"card-footer\">\n          <button type=\"button\" class=\"btn btn-primary\">Récuperer l'article</button>\n        </div>\n      </div>\n    </div>\n</section>\n\n<!--<section class=\"row objectList\">-->\n  <!--<div class=\"card w-90 p-3\">-->\n    <!--<div class=\"jumbotron text-center\">-->\n      <!--<div class=\"container\">-->\n        <!--<h1 class=\"jumbotron-heading\">Liste d'objet</h1>-->\n        <!--<p class=\"lead text-muted\">Veuillez choisir l'objet que souhaitez obtenir</p>-->\n      <!--</div>-->\n    <!--</div>-->\n\n    <!--<div class=\"py-5 bg-light\">-->\n      <!--<div class=\"container\">-->\n\n        <!--<div class=\"row\">-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\" style=\"height: 10%;width: 10%\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Appareils électroniques </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Pneus </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Huiles et peinture </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Électroménagers </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Métal </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bois </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Ordures ménagère </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bac de recyclage </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Résidus vert </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-12 text-center\">-->\n                <!--<p> Autres </p>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</section>-->\n\n<section *ngIf=\"step == serviceUnavailable\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\" style=\"\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Service de prise en charge</h1>\n        <p class=\"lead text-muted\">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div>\n              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Coordonnées</p></div>\n                <div><hr></div>\n                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>\n              </div>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Heures d'ouverture</p></div>\n                <div><hr></div>\n                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"card mb-4 box-shadow\">\n              <div id=\"map\" style=\"width:100%;height:400px;\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n</div>\n\n"
 
 /***/ }),
 
@@ -197,6 +200,7 @@ module.exports = "\n<div class=\"p-5\">\n<div *ngIf=\"step == 0\" class=\"row an
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("./src/app/services/users.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_items_service__ = __webpack_require__("./src/app/services/items.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_categories_service__ = __webpack_require__("./src/app/services/categories.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -211,16 +215,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DashboardComponent = (function () {
-    function DashboardComponent(authService, router, route, usersService, itemsService) {
+    function DashboardComponent(authService, router, route, usersService, itemsService, categoriesService) {
         this.authService = authService;
         this.router = router;
         this.route = route;
         this.usersService = usersService;
         this.itemsService = itemsService;
+        this.categoriesService = categoriesService;
+        this.categories = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        this.categories = this.categoriesService.getCategories();
         this.step = 0;
+    };
+    DashboardComponent.prototype.getNextStep = function (categorie) {
+        if (categorie.reuse) {
+            this.currentCategorie = categorie;
+            this.step = 2;
+        }
     };
     DashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -232,7 +246,8 @@ var DashboardComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */],
-            __WEBPACK_IMPORTED_MODULE_3__services_items_service__["a" /* ItemsService */]])
+            __WEBPACK_IMPORTED_MODULE_3__services_items_service__["a" /* ItemsService */],
+            __WEBPACK_IMPORTED_MODULE_5__services_categories_service__["a" /* CategoriesService */]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
@@ -251,7 +266,7 @@ module.exports = ""
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow\">\n  <h5 class=\"my-0 mr-md-auto font-weight-normal\"><img src=\"../../assets/img/logo.png\" style=\"height: 50px;\"></h5>\n  <nav class=\"my-2 my-md-0 mr-md-3\">\n    <a [routerLink]=\"['/register']\" *ngIf=\"!isLogged\" class=\"p-2 text-dark\" >S'enregistrer</a>\n    <a *ngIf=\"isLogged\" class=\"p-2 text-dark\" >{{currentUser.email}}</a>\n  </nav>\n  <a [routerLink]=\"['/login']\" *ngIf=\"!isLogged\" class=\"btn btn-outline-primary\" >Se connecter</a>\n  <a (click)=\"logout()\" *ngIf=\"isLogged\" class=\"btn btn-outline-primary\" >Se déconnecter</a>\n\n</div>\n"
+module.exports = "<div class=\"d-flex flex-column flex-md-row align-items-center p-3 px-md-4  bg-white border-bottom box-shadow\">\n  <h5 class=\"my-0 mr-md-auto font-weight-normal\"><img src=\"../../assets/img/logo.png\" style=\"height: 50px;\"></h5>\n  <nav class=\"my-2 my-md-0 mr-md-3\">\n    <a [routerLink]=\"['/register']\" *ngIf=\"!isLogged\" class=\"p-2 text-dark\" >S'enregistrer</a>\n    <a *ngIf=\"isLogged\" class=\"p-2 text-dark\" >{{currentUser.email}}</a>\n  </nav>\n  <a [routerLink]=\"['/login']\" *ngIf=\"!isLogged\" class=\"btn btn-outline-primary\" >Se connecter</a>\n  <a (click)=\"logout()\" *ngIf=\"isLogged\" class=\"btn btn-outline-primary\" >Se déconnecter</a>\n</div>\n"
 
 /***/ }),
 
@@ -320,14 +335,14 @@ var HeaderComponent = (function () {
 /***/ "./src/app/home/home.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".s-home {\n  width: 100%;\n  height: 100vh;\n  min-height: 786px;\n  background-color: transparent;\n  position: relative;\n  display: table;\n  background-size: contain;\n  /*background-image: url(https://images.unsplash.com/photo-1518563259479-d003c05a6507?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b5e8bea2f4b8f51eb5d71b9ba1d7e74c&auto=format&fit=crop&w=2250&q=80);*/\n}\n\n.s-home .shadow-overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  opacity: .4;\n  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8)));\n  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);\n  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);\n}\n\n.s-home .overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  opacity: .6;\n  background-color: #000000;\n}\n\n.no-js .s-home {\n  background: #000000;\n}\n\n.slogan {\n  padding-right: 10%;\n  margin-top: 5%;\n  color: forestgreen;\n}\n\n.home-content__main {\n  margin-top: 20%;\n}\n"
 
 /***/ }),
 
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row mb-4\">\n  <div class=\"col-12 text-center\">\n    <button class=\"btn btn-success\">Gérer mes déchets</button>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-12\">\n    <div class=\"jumbotron\">\n      <h1 class=\"mb-4\">R, permet</h1>\n      <p  class=\"lead\">Add your favorite products to your watchlist and we'll let you know when the price drops.</p>\n      <p >We'll update you everyday ;)</p>\n      <p class=\"lead text-center\"><a class=\"btn btn-primary btn-lg mt-2\" href=\"/signup\" role=\"button\">Sign Up</a></p>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<!--<div class=\"row mb-4\">-->\n  <!--<div class=\"col-12 text-center\">-->\n    <!--<button class=\"btn btn-success\">Gérer mes déchets</button>-->\n  <!--</div>-->\n<!--</div>-->\n\n<!--<div class=\"row\">-->\n  <!--<div class=\"col-12\">-->\n    <!--<div class=\"jumbotron\">-->\n      <!--<h1 class=\"mb-4\">R, permet</h1>-->\n      <!--<p  class=\"lead\">Add your favorite products to your watchlist and we'll let you know when the price drops.</p>-->\n      <!--<p >We'll update you everyday ;)</p>-->\n      <!--<p class=\"lead text-center\"><a class=\"btn btn-primary btn-lg mt-2\" href=\"/signup\" role=\"button\">Sign Up</a></p>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</div>-->\n\n<section id=\"home\" class=\"s-home target-section\" data-parallax=\"scroll\" data-image-src=\"https://images.unsplash.com/photo-1491002052546-bf38f186af56?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36540868671b0e7942ab946c0e44503d&auto=format&fit=crop&w=2200&q=80\" data-natural-width=3000 data-natural-height=2000 data-position-y=center>\n<div class=\"home-content\">\n  <div class=\"row home-content__main ml-5\">\n    <h1 class=\"col-12\">\n      Rcube est la toute nouvelle solution<br>\n      pour permettre à ces citoyens<br>\n      de disposer d'objet de la façon <br>\n      la plus écologique possible experiences.\n    </h1>\n    <div class=\"col-12\">\n      <a href=\"#contact\" class=\"smoothscroll btn btn-primary\">\n        S'enregistrer\n      </a>\n    </div>\n    <h4 class=\"col-12 mt-5 text-right slogan\">Une ville intelligente est une ville verte</h4>\n  </div>\n  <div class=\"home-content__line\"></div>\n</div>\n</section>\n\n\n<!--<div class=\"row featurette\">-->\n  <!--<div class=\"col-md-7\">-->\n    <!--<h2 class=\"featurette-heading\">First featurette heading. <span class=\"text-muted\">It'll blow your mind.</span></h2>-->\n    <!--<p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->\n  <!--</div>-->\n  <!--<div class=\"col-md-5\">-->\n    <!--<img class=\"featurette-image img-fluid mx-auto\" data-src=\"holder.js/500x500/auto\" alt=\"500x500\" style=\"width: 500px; height: 500px;\" src=\"data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1632e6f09b1%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1632e6f09b1%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E\" data-holder-rendered=\"true\">-->\n  <!--</div>-->\n<!--</div>-->\n\n\n\n"
 
 /***/ }),
 
@@ -666,6 +681,55 @@ var AuthGuard = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
     ], AuthGuard);
     return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/categories.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoriesService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CategoriesService = (function () {
+    function CategoriesService() {
+        this.categories = [
+            { name: 'Appareils électroniques', reuse: true, image: '', description: '' },
+            { name: 'Pneus', reuse: false },
+            { name: 'Huile et peinture', reuse: false },
+            { name: 'Électroménagers', reuse: true },
+            { name: 'Métal', reuse: false },
+            { name: 'Bois', reuse: false },
+            { name: 'Ordures ménagères', reuse: false },
+            { name: 'Matières recyclables', reuse: false },
+            { name: 'Compostes', reuse: false },
+            { name: 'Déchets encombrants', reuse: false },
+            { name: 'Vêtements et accessoires', reuse: true },
+            { name: 'Meubles', reuse: true },
+            { name: 'Jouets', reuse: true },
+            { name: 'Articles de sport', reuse: true }
+        ];
+    }
+    CategoriesService.prototype.getCategories = function () {
+        return this.categories;
+    };
+    CategoriesService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], CategoriesService);
+    return CategoriesService;
 }());
 
 
