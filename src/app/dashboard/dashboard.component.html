@@ -29,6 +29,7 @@
         <div class="row">
           <div *ngFor="let cat of categories" class="col-md-3">
             <div (click)="getNextStep(cat)" class="card mb-4 box-shadow" style="background-image: url({{cat.image}})">
+              <img src="{{cat.image}}">
               <div class="card-body">
                 <p> {{cat.name}} </p>
               </div>
