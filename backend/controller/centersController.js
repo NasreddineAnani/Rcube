@@ -17,9 +17,10 @@ router.get('/nearestCenter', function (req, res) {
   console.log(url);
   request(url, (error, result, body) => {
     console.log(body);
-    res.status(200).send({"nearestCenter": body});
-
+    //res.status(200).send({"nearestCenter": body});
   });
+  res.status(200).send({"nearestCenter": '7272 Saint-Patrick St, Lasalle, QC H8N 2J7','coord': {'lat':45.5577848,'long':-73.8714164}});
+
 });
 
 // get when trash coming by address

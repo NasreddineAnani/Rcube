@@ -5,6 +5,7 @@ import { ItemsService } from '../services/items.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { CategoriesService } from '../services/categories.service';
 import { PickupService } from '../services/pickup.service';
+import { CentersService } from '../services/centers.service';
 
 
 @Component({
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
   pickUpSize: any;
   lat: number = 45.5577848;
   lng: number = -73.8714164;
+  nearestAddress: string;
   imageItem: any;
   categorie: any;
 
@@ -32,11 +34,13 @@ export class DashboardComponent implements OnInit {
     private usersService: UsersService,
     private itemsService: ItemsService,
     private categoriesService: CategoriesService,
-    private pickupService: PickupService
+    private pickupService: PickupService,
+    private centersService: CentersService
   ) { }
 
   ngOnInit() {
     this.categories = this.categoriesService.getCategories();
+    this.getNearestCenter();
     this.step = 0;
   }
 
@@ -90,5 +94,20 @@ export class DashboardComponent implements OnInit {
 
   onUpload(info) {
     this.imageItem = info.originalUrl;
+  }
+
+  getNearestCenter() {
+    this.usersService.getUserByEmail('wesh@wesh.com').then(res => {
+      let address = res['users'][0].address;
+      this.centersService.getCenterByAddress(address).then(res => {
+        console.log(res)
+
+        this.lat = res['coord']['lat'];
+        this.lng = res['coord']['long'];
+        this.nearestAddress = res['nearestCenter'];
+        console.log(this.nearestAddress)
+      })
+    })
+
   }
 }

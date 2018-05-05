@@ -10,7 +10,7 @@
     <button (click)="step = 0" class="btn btn-success">Retour</button>
   </div>
 
-  <div *ngIf="step === 0" class="pt-2 row animated slideInRight">
+  <div *ngIf="step === 0" class="pt-2 row animated fadeIn">
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
@@ -48,7 +48,6 @@
       </div>
   </div>
   </div>
-
   <section *ngIf="step == 1" class="row category animated slideInRight">
     <div class="col-12 card w-90 p-3 shadow border-0">
       <h1>Jeter ou donner</h1>
@@ -79,7 +78,7 @@
   </section>
 
   <!--ecocentre-->
-  <section *ngIf="step == 2" class="row category animated slideInRight">
+  <section *ngIf="step == 2" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow" style="">
       <div class="jumbotron text-center">
         <div class="container">
@@ -99,7 +98,7 @@
               <hr>
               <div class="col-md-12">
                 <div><p class="titre"> Adresse de l'écocentre le plus proche de chez vous</p></div>
-                <div><p> 7272 Saint-Patrick St, Lasalle, QC H8N 2J7</p></div>
+                <div><p>{{nearestAddress}}</p></div>
               </div>
               <hr>
               <div class="col-md-12">
@@ -188,7 +187,7 @@
   </section>
 
   <!--  service d'ordure-->
-  <section *ngIf="step == 4" class="row category animated slideInRight">
+  <section *ngIf="step == 4" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
       <div class="jumbotron text-center">
         <div class="container">
@@ -217,7 +216,7 @@
   </section>
 
   <!--  donner-->
-  <section *ngIf="step == 5" class="row category animated slideInRight">
+  <section *ngIf="step == 5" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
       <div class="jumbotron text-center">
         <div class="container">
