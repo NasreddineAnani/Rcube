@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit {
   currentCategorie: any;
   selection: any;
   step: any;
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 
   constructor(
     private authService: AuthService,
@@ -25,19 +27,18 @@ export class DashboardComponent implements OnInit {
     private usersService: UsersService,
     private itemsService: ItemsService,
     private categoriesService: CategoriesService
-
   ) { }
 
   ngOnInit() {
     this.categories = this.categoriesService.getCategories();
     this.step = 0;
-
   }
 
   getNextStep(categorie) {
     if(!categorie.reuse) {
       this.currentCategorie = categorie;
-      this.step = 2;
+      //this.step = this.currentCategorie.nextStep;
+      this.step = 3;
     }
   }
 }

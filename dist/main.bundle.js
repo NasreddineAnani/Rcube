@@ -186,7 +186,7 @@ module.exports = ".product-img {\n  -o-object-fit: contain;\n     object-fit: co
 /***/ "./src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"p-5\">\n<div *ngIf=\"step == 0\" class=\"row animated slideInRight\">\n  <div class=\"card col-12 w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Sélectionner</h1>\n        <p class=\"lead text-muted\">Comment souhaitez-vous recycler aujourd'hui ?</p>\n      </div>\n    </div>\n  <div class=\"card-body text-center\">\n    <button (click)=\"step = 1\" class=\"btn btn-lg btn-success\" role=\"button\">Jeter ou donner</button>\n    <button class=\"btn btn-lg btn-outline-success\" role=\"button\">Chercher</button>\n  </div>\n  </div>\n</div>\n\n<section *ngIf=\"step === 1\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Catégories</h1>\n        <p class=\"lead text-muted\">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div *ngFor=\"let cat of categories\" class=\"col-md-3\">\n            <div (click)=\"getNextStep(cat)\" class=\"card mb-4 box-shadow\">\n              <div class=\"card-body\">\n                <p> {{cat.name}} </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section *ngIf=\"step === 2\" class=\"row category animated slideInRight\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        Objet à donner\n      </div>\n      <div class=\"card-group card-body col-12\">\n          <div class=\"row\">\n            <div class=\"card col-6\">\n              <h5 class=\"card-title\">Titre objet</h5>\n              <div class=\"card-body\">\n              <p class=\"card-text\">Description de l'objet Lorem ipsum dolor sit amet, metus mollit magnis, non cras porta nulla ac, diam sed neque tellus felis tortor, in massa tortor. Sagittis sed, massa luctus augue lacus penatibus massa sed. Enim lobortis sollicitudin sodales velit metus, sociosqu nunc, massa in, nullam id ut urna vulputate. Mus tristique, lectus fusce, vitae enim magna magna mi pellentesque, litora nunc. Scelerisque commodo, quisque tempor, amet nonummy, lorem odio velit pellentesque mattis. Praesent at rutrum congue senectus, gravida faucibus id posuere velit, aliquet ut duis nec proin sed, aenean pede sem morbi vestibulum tempor. A nonummy eget in, cum eleifend duis lobortis ultricies nullam, vestibulum lectus et lectus. Velit orci, tellus sit mollis, adipiscing in molestias ut nam nullam pellentesque, dolor volutpat id mattis ante leo ut, mattis risus velit. Sem sapien velit habitant ac, tempus elit suspendisse commodo justo nulla sit, leo adipiscing per cum nec viverra at.</p>\n              </div>\n            </div>\n            <div class=\"card col-6 img-container text-center\">\n              <div class=\"card-body\">\n              <img class=\"product-img img-responsive\" src=\"https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg\">\n              </div>\n            </div>\n          </div>\n        <div class=\"card-footer\">\n          <button type=\"button\" class=\"btn btn-primary\">Récuperer l'article</button>\n        </div>\n      </div>\n    </div>\n</section>\n\n<!--<section class=\"row objectList\">-->\n  <!--<div class=\"card w-90 p-3\">-->\n    <!--<div class=\"jumbotron text-center\">-->\n      <!--<div class=\"container\">-->\n        <!--<h1 class=\"jumbotron-heading\">Liste d'objet</h1>-->\n        <!--<p class=\"lead text-muted\">Veuillez choisir l'objet que souhaitez obtenir</p>-->\n      <!--</div>-->\n    <!--</div>-->\n\n    <!--<div class=\"py-5 bg-light\">-->\n      <!--<div class=\"container\">-->\n\n        <!--<div class=\"row\">-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\" style=\"height: 10%;width: 10%\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Appareils électroniques </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Pneus </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Huiles et peinture </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Électroménagers </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Métal </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bois </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Ordures ménagère </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Bac de recyclage </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-4\">-->\n            <!--<div class=\"card mb-4 box-shadow\">-->\n              <!--<div class=\"card-body\">-->\n                <!--<p> Résidus vert </p>-->\n              <!--</div>-->\n            <!--</div>-->\n          <!--</div>-->\n          <!--<div class=\"col-md-12 text-center\">-->\n                <!--<p> Autres </p>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n<!--</section>-->\n\n<section *ngIf=\"step == serviceUnavailable\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\" style=\"\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Service de prise en charge</h1>\n        <p class=\"lead text-muted\">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div>\n              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Coordonnées</p></div>\n                <div><hr></div>\n                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>\n              </div>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Heures d'ouverture</p></div>\n                <div><hr></div>\n                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"card mb-4 box-shadow\">\n              <div id=\"map\" style=\"width:100%;height:400px;\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n</div>\n\n"
+module.exports = "\n<div class=\"p-5\">\n<div *ngIf=\"step == 0\" class=\"row animated slideInRight\">\n  <div class=\"card col-12 w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Sélectionner</h1>\n        <p class=\"lead text-muted\">Comment souhaitez-vous recycler aujourd'hui ?</p>\n      </div>\n    </div>\n  <div class=\"card-body text-center\">\n    <button (click)=\"step = 1\" class=\"btn btn-lg btn-success\" role=\"button\">Jeter ou donner</button>\n    <button class=\"btn btn-lg btn-outline-success\" role=\"button\">Chercher</button>\n  </div>\n  </div>\n</div>\n\n<section *ngIf=\"step === 1\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Catégories</h1>\n        <p class=\"lead text-muted\">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div *ngFor=\"let cat of categories\" class=\"col-md-3\">\n            <div (click)=\"getNextStep(cat)\" class=\"card mb-4 box-shadow\" style=\"background-image: url({{cat.image}})\">\n              <div class=\"card-body\">\n                <p> {{cat.name}} </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!--<section *ngIf=\"step === 'x'\" class=\"row category animated slideInRight\">\n    <div class=\"col-12 card w-90 p-3\">\n      <div class=\"jumbotron text-center\">\n        <div class=\"container\">\n          <h1 class=\"jumbotron-heading\">Cet objet ne peut réutilisé</h1>\n          <p class=\"lead text-muted\">Vous pouvez vous rendre dans le centre ci-dessous ou prendre rendez en ligne pour un ramassage</p>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"card-group card-body col-12\">\n                <div class=\"row\">\n                  <div class=\"card col-6\">\n                    <h5 class=\"card-title\">{{currentCategorie.name}}</h5>\n                    <div class=\"card-body\">\n                    <p class=\"card-text\">Prendre rendez-vous afin de se débarasser du matériel</p>\n                      <button class=\"btn btn-success\">Rendez-vous</button>\n                    </div>\n                  </div>\n                  <div class=\"card col-6 img-container text-center\">\n                    <div class=\"card-body\">\n                    <img class=\"product-img img-responsive\" src=\"https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg\">\n                    </div>\n                  </div>\n                </div>\n            </div>\n      </div>\n    </div>\n</section>-->\n\n<section *ngIf=\"step == 2\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\" style=\"\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Service de prise en charge</h1>\n        <p class=\"lead text-muted\">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-6\">\n            <div>\n              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Coordonnées</p></div>\n                <div><hr></div>\n                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>\n              </div>\n            </div>\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n\n              </div>\n              <div class=\"col-md-6\">\n                <div><p> Heures d'ouverture</p></div>\n                <div><hr></div>\n                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-md-6\">\n            <div class=\"card mb-4 box-shadow\">\n              <div id=\"map\" style=\"width:100%;height:400px;\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section *ngIf=\"step == 1\" class=\"row category animated slideInRight\">\n  <div class=\"col-12 card w-90 p-3\" style=\"\">\n    <div class=\"jumbotron text-center\">\n      <div class=\"container\">\n        <h1 class=\"jumbotron-heading\">Service de prise en charge à domicile</h1>\n        <p class=\"lead text-muted\">Veuiller remplir le formulaire suivant afin de profiter du service de prise en charge à domicile offert par votre municipalité.</p>\n      </div>\n    </div>\n\n    <div class=\"py-5 bg-light\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-md-3\"></div>\n          <div class=\"col-md-6\">\n            <form>\n              <div class=\"mb-3\">\n                <label>Dimension de l'objet à prendre en charge</label>\n                <div>\n                  <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"optradio\">Option 1\n                  </label>\n                  <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"optradio\">Option 2\n                  </label>\n                  <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"optradio\">Option 3\n                  </label>\n                </div>\n              </div>\n              <div class=\"mb-3\">\n                <label for=\"serviceDate\">Date de prise en charge à votre domicile</label>\n                <input type=\"date\" id=\"serviceDate\">\n              </div>\n              <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">Valider</button>\n            </form>\n          </div>\n          <div class=\"col-md-3\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n</div>\n\n"
 
 /***/ }),
 
@@ -231,7 +231,7 @@ var DashboardComponent = (function () {
         this.step = 0;
     };
     DashboardComponent.prototype.getNextStep = function (categorie) {
-        if (categorie.reuse) {
+        if (!categorie.reuse) {
             this.currentCategorie = categorie;
             this.step = 2;
         }
@@ -352,9 +352,10 @@ module.exports = "<!--<div class=\"row mb-4\">-->\n  <!--<div class=\"col-12 tex
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_users_service__ = __webpack_require__("./src/app/services/users.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_items_service__ = __webpack_require__("./src/app/services/items.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("./src/app/services/users.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_items_service__ = __webpack_require__("./src/app/services/items.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -368,33 +369,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomeComponent = (function () {
-    function HomeComponent(router, route, itemsService, usersService) {
+    function HomeComponent(router, route, itemsService, usersService, authService) {
         this.router = router;
         this.route = route;
         this.itemsService = itemsService;
         this.usersService = usersService;
+        this.authService = authService;
         this.loading = false;
         this.links = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
-        var _this = this;
+        if (this.authService.currentUser()) {
+            this.router.navigate(['dashboard']);
+        }
         this.empty = false;
         this.loading = true;
-        this.route.params.subscribe(function (params) {
-            _this.username = params['id'];
-            _this.usersService.getUserByUsername(_this.username).then(function (res) {
-                if (res.length == 0) {
-                    _this.loading = false;
-                    _this.empty = true;
-                }
-                else {
-                    _this.user = res[0];
-                }
-            }).catch(function (err) {
-                console.log(err);
-            });
-        });
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -402,10 +393,11 @@ var HomeComponent = (function () {
             template: __webpack_require__("./src/app/home/home.component.html"),
             styles: [__webpack_require__("./src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_2__services_items_service__["a" /* ItemsService */],
-            __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_3__services_items_service__["a" /* ItemsService */],
+            __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */],
+            __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -455,6 +447,9 @@ var LoginComponent = (function () {
         this.route = route;
     }
     LoginComponent.prototype.ngOnInit = function () {
+        if (this.authService.currentUser()) {
+            this.router.navigate(['dashboard']);
+        }
     };
     LoginComponent.prototype.login = function (email, password) {
         var _this = this;
@@ -526,6 +521,9 @@ var RegisterComponent = (function () {
         this.usersService = usersService;
     }
     RegisterComponent.prototype.ngOnInit = function () {
+        if (this.authService.currentUser()) {
+            this.router.navigate(['dashboard']);
+        }
     };
     RegisterComponent.prototype.register = function (lastname, firstname, address, phoneNumber, email, password, passwordConfirmation) {
         var _this = this;
@@ -707,19 +705,19 @@ var CategoriesService = (function () {
     function CategoriesService() {
         this.categories = [
             { name: 'Appareils électroniques', reuse: true, image: '', description: '' },
-            { name: 'Pneus', reuse: false },
-            { name: 'Huile et peinture', reuse: false },
-            { name: 'Électroménagers', reuse: true },
-            { name: 'Métal', reuse: false },
-            { name: 'Bois', reuse: false },
-            { name: 'Ordures ménagères', reuse: false },
-            { name: 'Matières recyclables', reuse: false },
-            { name: 'Compostes', reuse: false },
-            { name: 'Déchets encombrants', reuse: false },
-            { name: 'Vêtements et accessoires', reuse: true },
-            { name: 'Meubles', reuse: true },
-            { name: 'Jouets', reuse: true },
-            { name: 'Articles de sport', reuse: true }
+            { name: 'Pneus', reuse: false, image: '', description: '' },
+            { name: 'Huile et peinture', reuse: false, image: '', description: '' },
+            { name: 'Électroménagers', reuse: true, image: '', description: '' },
+            { name: 'Métal', reuse: false, image: '', description: '' },
+            { name: 'Bois', reuse: false, image: '', description: '' },
+            { name: 'Ordures ménagères', reuse: false, image: '', description: '' },
+            { name: 'Matières recyclables', reuse: false, image: '', description: '' },
+            { name: 'Compostes', reuse: false, image: '', description: '' },
+            { name: 'Déchets encombrants', reuse: false, image: '', description: '' },
+            { name: 'Vêtements et accessoires', reuse: true, image: '', description: '' },
+            { name: 'Meubles', reuse: true, image: '', description: '' },
+            { name: 'Jouets', reuse: true, image: '', description: '' },
+            { name: 'Articles de sport', reuse: true, image: '', description: '' }
         ];
     }
     CategoriesService.prototype.getCategories = function () {

@@ -29,7 +29,6 @@
         <div class="row">
           <div *ngFor="let cat of categories" class="col-md-3">
             <div (click)="getNextStep(cat)" class="card mb-4 box-shadow" style="background-image: url({{cat.image}})">
-              <img class="img-cat" src="{{cat.image}}">
               <div class="card-body">
                 <p> {{cat.name}} </p>
               </div>
@@ -40,35 +39,6 @@
     </div>
   </div>
 </section>
-
-<!--<section *ngIf="step === 'x'" class="row category animated slideInRight">
-    <div class="col-12 card w-90 p-3">
-      <div class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Cet objet ne peut réutilisé</h1>
-          <p class="lead text-muted">Vous pouvez vous rendre dans le centre ci-dessous ou prendre rendez en ligne pour un ramassage</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card-group card-body col-12">
-                <div class="row">
-                  <div class="card col-6">
-                    <h5 class="card-title">{{currentCategorie.name}}</h5>
-                    <div class="card-body">
-                    <p class="card-text">Prendre rendez-vous afin de se débarasser du matériel</p>
-                      <button class="btn btn-success">Rendez-vous</button>
-                    </div>
-                  </div>
-                  <div class="card col-6 img-container text-center">
-                    <div class="card-body">
-                    <img class="product-img img-responsive" src="https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg">
-                    </div>
-                  </div>
-                </div>
-            </div>
-      </div>
-    </div>
-</section>-->
 
 <section *ngIf="step == 2" class="row category animated slideInRight">
   <div class="col-12 card w-90 p-3" style="">
@@ -111,7 +81,12 @@
           </div>
           <div class="col-md-6">
             <div class="card mb-4 box-shadow">
-              <div id="map" style="width:100%;height:400px;"></div>
+              <div id="map" style="width:100%;height:400px;">
+                <agm-map [latitude]="lat" [longitude]="lng">
+                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+              </div>
+
             </div>
           </div>
         </div>
@@ -120,6 +95,48 @@
   </div>
 </section>
 
+<section *ngIf="step == 3" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3" style="">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
+        <p class="lead text-muted">Veuiller remplir le formulaire suivant afin de profiter du service de prise en charge à domicile offert par votre municipalité.</p>
+      </div>
+    </div>
+
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label>Dimension de l'objet à prendre en charge</label>
+                <div>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Petit
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Moyen
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Grand
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="serviceDate">Date de prise en charge à votre domicile</label>
+                <input type="date" id="serviceDate">
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+            </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </div>
 
