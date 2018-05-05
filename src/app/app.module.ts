@@ -19,6 +19,7 @@ import { UsersService } from './services/users.service';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent } from './signup/signup.component';
+import { HeaderComponent } from './header/header.component';
 
 
 export const firebaseConfig = {
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     LoginComponent,
     DashboardComponent,
     UcWidgetComponent,
-    SignupComponent
+    SignupComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{ enableTracing: true }),
