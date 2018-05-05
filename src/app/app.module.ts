@@ -24,6 +24,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCq5K8mLvTVakYFXLBGiPVaEafA0W5tIJc",
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: SignupComponent }
+  { path: 'register', component: RegisterComponent }
 ];
 
 
@@ -59,7 +60,8 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    GooglePlaceModule
   ],
   providers: [
     AuthGuard,
