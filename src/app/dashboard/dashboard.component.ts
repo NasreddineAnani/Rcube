@@ -23,9 +23,10 @@ export class DashboardComponent implements OnInit {
   pickUpSize: any;
   lat: number = 45.5577848;
   lng: number = -73.8714164;
-  nearestAddress: string;
+  nearestAddress: string = '7272 Saint-Patrick St, Lasalle, QC H8N 2J7';
   imageItem: any;
   categorie: any;
+  trashDay: string = 'mardi, chaque 2 semaines'
 
   constructor(
     private authService: AuthService,
@@ -41,6 +42,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.categories = this.categoriesService.getCategories();
     this.getNearestCenter();
+    this.getTrashDay();
     this.step = 0;
   }
 
@@ -100,14 +102,21 @@ export class DashboardComponent implements OnInit {
     this.usersService.getUserByEmail('wesh@wesh.com').then(res => {
       let address = res['users'][0].address;
       this.centersService.getCenterByAddress(address).then(res => {
-        console.log(res)
-
         this.lat = res['coord']['lat'];
         this.lng = res['coord']['long'];
         this.nearestAddress = res['nearestCenter'];
-        console.log(this.nearestAddress)
       })
     })
+  }
 
+  getTrashDay() {
+    this.usersService.getUserByEmail('wesh@wesh.com').then(res => {
+      let address = res['users'][0].address;
+      this.centersService.getDayTrash(address).then(res => {
+        this.lat = res['coord']['lat'];
+        this.lng = res['coord']['long'];
+        this.trashDay = res['trashDay'];
+      })
+    })
   }
 }

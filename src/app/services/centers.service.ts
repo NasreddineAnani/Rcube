@@ -47,20 +47,14 @@ export class CentersService {
         }).subscribe((link) => {
         resolve(<any>link);
       });
-
     });
   }
 
-  getDayTrash() {
+  getDayTrash(address) {
     return new Promise((resolve, reject) => {
-
-      this.usersService.getUserByEmail(this.authService.currentUser().email).then(res => {
-
-        const address = res['users'][0].address;
         const contentHeaders = new Headers();
         contentHeaders.append('Accept', 'application/json');
         contentHeaders.append('Content-Type', 'application/json');
-
         this.http.get(`/trashDay?address=${address}`, {headers: contentHeaders})
           .map(res => res.json())
           .catch((error: any) => {
@@ -68,10 +62,7 @@ export class CentersService {
             return Observable.throw(error.json().error || 'Server error');
           }).subscribe((link) => {
           resolve(<any>link);
-        });
       });
-
-
     });
   }
 

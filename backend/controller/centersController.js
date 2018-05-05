@@ -30,10 +30,11 @@ router.get('/trashDay', function (req, res) {
   let url = host + "/trashDay/" + address;
   console.log(url);
   request(url, (error, result, body) => {
-    console.log(body);
-    res.status(200).send({"trashDay": body});
-
+    //res.status(200).send({"trashDay": body});
   });
+
+  res.status(200).send({"trashDay": 'mardi, chaque 2 semaines','coord': {'lat':45.5577848,'long':-73.8714164}});
+
 });
 
 
