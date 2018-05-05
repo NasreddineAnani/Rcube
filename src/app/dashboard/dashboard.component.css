@@ -41,3 +41,7 @@ hr.style14 {
 .borhane {
   background-color: rosybrown;
 }
+
+.btn-round {
+  border-radius: 50% ;
+}

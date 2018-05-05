@@ -6,10 +6,6 @@
     </div>
   </div>
 
-  <div *ngIf="step !== 0" class="p-2">
-    <button (click)="step = 0" class="btn btn-success">Retour</button>
-  </div>
-
   <div *ngIf="step === 0" class="pt-2 row animated fadeIn">
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 pl-5 pr-5 pb-5 border-0 shadow mx-auto bgCard">
       <div class="jumbotron text-center pb-1 bgJombotron">
@@ -51,6 +47,11 @@
 
   <section *ngIf="step == 1" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow border-0">
+
+      <div *ngIf="step == 1" class="p-2">
+        <button (click)="step = 0" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
+
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
@@ -81,6 +82,9 @@
   <!--ecocentre-->
   <section *ngIf="step == 2" class="category animated fadeIn">
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
+      <div *ngIf="step == 2 || step == 3  ||  step == 4 || step == 5" class="p-2">
+        <button (click)="step = 1" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
@@ -126,6 +130,9 @@
   <!--  book-->
   <section *ngIf="step == 3" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3 shadow border-0">
+      <div *ngIf="step == 2 || step == 3  ||  step == 4 || step == 5" class="p-2">
+        <button (click)="step = 1" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
@@ -184,6 +191,9 @@
   <!--  service d'ordure-->
   <section *ngIf="step == 4" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
+      <div *ngIf="step == 2 || step == 3  ||  step == 4 || step == 5" class="p-2">
+        <button (click)="step = 1" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
@@ -213,6 +223,9 @@
   <!--  donner-->
   <section *ngIf="step == 5" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
+      <div *ngIf="step == 2 || step == 3  ||  step == 4 || step == 5" class="p-2">
+        <button (click)="step = 1" class="btn btn-outline-success btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      </div>
       <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Offrir l'objet à disposer</h1>
