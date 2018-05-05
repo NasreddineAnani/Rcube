@@ -87,12 +87,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__dashboard_dashboard_component__ = __webpack_require__("./src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__signup_signup_component__ = __webpack_require__("./src/app/signup/signup.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__register_register_component__ = __webpack_require__("./src/app/register/register.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -137,7 +139,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__dashboard_dashboard_component__["a" /* DashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_7_ngx_uploadcare_widget__["UcWidgetComponent"],
                 __WEBPACK_IMPORTED_MODULE_16__signup_signup_component__["a" /* SignupComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__header_header_component__["a" /* HeaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_17__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__register_register_component__["a" /* RegisterComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: true }),
@@ -290,7 +293,7 @@ module.exports = ""
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row mb-4\">\n  <div class=\"col-12 text-center\">\n    <button class=\"btn btn-success\">Gérer mes déchets</button>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-12\">\n    <div class=\"jumbotron\">\n      <h1 class=\"mb-4\">R, the new way to shop online</h1>\n      <p  class=\"lead\">Add your favorite products to your watchlist and we'll let you know when the price drops.</p>\n      <p >We'll update you everyday ;)</p>\n      <p class=\"lead text-center\"><a class=\"btn btn-primary btn-lg mt-2\" href=\"/signup\" role=\"button\">Sign Up</a></p>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row mb-4\">\n  <div class=\"col-12 text-center\">\n    <button class=\"btn btn-success\">Gérer mes déchets</button>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-12\">\n    <div class=\"jumbotron\">\n      <h1 class=\"mb-4\">R, permet</h1>\n      <p  class=\"lead\">Add your favorite products to your watchlist and we'll let you know when the price drops.</p>\n      <p >We'll update you everyday ;)</p>\n      <p class=\"lead text-center\"><a class=\"btn btn-primary btn-lg mt-2\" href=\"/signup\" role=\"button\">Sign Up</a></p>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -372,11 +375,7 @@ module.exports = ""
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-3\"></div>\n    <div class=\"col-md-6 text-center\">\n      <h4 class=\"mb-3\">Login</h4>\n      <form>\n\n        <div class=\"mb-3\">\n          <label for=\"username\">Adresse Courriel</label>\n          <input type=\"text\" class=\"form-control\" id=\"username\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"username\">Mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"password\" required=\"\">\n        </div>\n\n        <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">Se connecter</button>\n      </form>\n    </div>\n    <div class=\"col-md-3\"></div>\n  </div>\n</div>\n"
-=======
-module.exports = "<div *ngIf=\"false\" class=\"login-wrapper \">\n\n  <div class=\"bg-pic\">\n\n    <img src=\"assets/img/icons_faded.png\" data-src=\"assets/img/icons_faded.png\" data-src-retina=\"assets/img/icons_faded.png\" alt=\"\" class=\"lazy\">\n\n  </div>\n\n  <div class=\"login-container bg-white\">\n    <div class=\"p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40\">\n\n      <p class=\"p-t-35\">Sign into your pages account</p>\n\n      <form id=\"form-login\" class=\"p-t-15\" role=\"form\"  novalidate=\"novalidate\">\n\n        <div class=\"form-group form-group-default\">\n          <label>Email</label>\n          <div class=\"controls\">\n            <input #email type=\"text\" name=\"username\" placeholder=\"Email\" class=\"form-control\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n\n        <div class=\"form-group form-group-default\">\n          <label>Password</label>\n          <div class=\"controls\">\n            <input #password type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n        <button (click)=\"login(email.value, password.value)\" class=\"btn btn-primary btn-cons m-t-10\">Sign in</button>\n      </form>\n\n      <div class=\"pull-bottom sm-pull-bottom\">\n        <div class=\"m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix\">\n          <div class=\"col-sm-3 col-md-2 no-padding\">\n            <img alt=\"\" class=\"m-t-5\" data-src=\"assets/img/demo/pages_icon.png\" data-src-retina=\"assets/img/demo/pages_icon_2x.png\" height=\"60\" src=\"assets/img/demo/pages_icon_2x.png\" width=\"60\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n\n\n<div class=\"container-fluid\" id=\"wrapper\">\n  <div class=\"row\">\n    <main class=\"col-xs-10 col-sm-8 col-md-4 m-auto \">\n      <div class=\"login-panel card mt-5\">\n        <div class=\"card-block\">\n          <h3 class=\"card-title text-center mt-1\">Login</h3>\n          <div class=\"divider mt-0\"></div>\n          <form role=\"form\">\n            <fieldset>\n              <div class=\"form-group\">\n                <input class=\"form-control\" placeholder=\"E-mail\" name=\"email\" type=\"email\" autofocus=\"\">\n              </div>\n              <div class=\"form-group\">\n                <input class=\"form-control\" placeholder=\"Password\" name=\"password\" type=\"password\" value=\"\">\n              </div>\n              <div class=\"checkbox mt-1 mb-2\">\n                <label class=\"custom-control custom-checkbox\">\n                  <input type=\"checkbox\" class=\"custom-control-input\"><span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">Remember me</span></label>\n              </div>\n              <div class=\"text-center\"><a  class=\"btn btn-lg btn-primary\">Login</a></div></fieldset>\n          </form>\n        </div>\n      </div>\n    </main>\n  </div>\n</div>\n"
->>>>>>> 56824fa7851772960c8ae1e7af9d63f989d2dbdf
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-3\"></div>\n    <div class=\"col-md-6 text-center\">\n      <h4 class=\"mb-3\">Login</h4>\n      <form>\n\n        <div class=\"mb-3\">\n          <label for=\"username\">Adresse Courriel</label>\n          <input type=\"text\" class=\"form-control\" id=\"username\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"username\">Mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"password\" required=\"\">\n        </div>\n\n        <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">Se connecter</button>\n      </form>\n    </div>\n    <div class=\"col-md-3\"></div>\n  </div>\n\n</div>\n\n"
 
 /***/ }),
 
@@ -428,6 +427,56 @@ var LoginComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-3\"></div>\n    <div class=\"col-md-6 text-center\">\n      <h4 class=\"mb-3\">S'enregistrer</h4>\n      <form>\n\n        <div class=\"row\">\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"lastName\">Nom</label>\n            <input type=\"text\" class=\"form-control\" id=\"lastName\" required=\"\">\n          </div>\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"firstName\">Prénom</label>\n            <input type=\"text\" class=\"form-control\" id=\"firstName\" required=\"\">\n          </div>\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"adress\">Adresse</label>\n          <input type=\"text\" class=\"form-control\" id=\"adress\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"phoneNumber\">Numéro de téléphone</label>\n          <input type=\"text\" class=\"form-control\" id=\"phoneNumber\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"email\">Adresse Courriel</label>\n          <input type=\"text\" class=\"form-control\" id=\"email\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"password\">Mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"password\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"passwordConfirm\">Confirmer le mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"passwordConfirm\" required=\"\">\n        </div>\n\n        <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">S'enregistrer</button>\n      </form>\n    </div>\n    <div class=\"col-md-3\"></div>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/register/register.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegisterComponent = (function () {
+    function RegisterComponent() {
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-register',
+            template: __webpack_require__("./src/app/register/register.component.html"),
+            styles: [__webpack_require__("./src/app/register/register.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], RegisterComponent);
+    return RegisterComponent;
 }());
 
 
@@ -812,7 +861,7 @@ module.exports = ""
 /***/ "./src/app/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-wrapper \">\n\n  <div class=\"login-container bg-white\">\n    <div class=\"p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40\">\n      <img src=\"assets/img/logo_2x.png\" alt=\"logo\" data-src=\"assets/img/logo_2x.png\" data-src-retina=\"assets/img/logo_2x.png\" width=\"78\" height=\"78\">\n      <p class=\"p-t-35\">Register</p>\n\n      <form id=\"form-login\" class=\"p-t-15\" role=\"form\"  novalidate=\"novalidate\">\n\n        <div class=\"form-group form-group-default\">\n          <label>Email</label>\n          <div class=\"controls\">\n            <input #email type=\"text\" name=\"email\" placeholder=\"Email\" class=\"form-control\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n        <div class=\"form-group form-group-default\">\n          <label>Username</label>\n          <div class=\"controls\">\n            <input #username type=\"text\" name=\"username\" placeholder=\"Username\" class=\"form-control\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n        <div class=\"form-group form-group-default\">\n          <label>Password</label>\n          <div class=\"controls\">\n            <input #password type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n        <div class=\"form-group form-group-default\">\n          <label>Password Confirmation</label>\n          <div class=\"controls\">\n            <input #passwordConfirmation type=\"password\" class=\"form-control\" name=\"passwordConfirmation\" placeholder=\"Password Confirmation\" required=\"\" aria-required=\"true\">\n          </div>\n        </div>\n\n        <button (click)=\"register(email.value, username.value, password.value, passwordConfirmation.value)\" class=\"btn btn-primary btn-cons m-t-10\">Sign up</button>\n      </form>\n\n      <div class=\"pull-bottom sm-pull-bottom\">\n        <div class=\"m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix\">\n          <div class=\"col-sm-3 col-md-2 no-padding\">\n            <img alt=\"\" class=\"m-t-5\" data-src=\"assets/img/demo/pages_icon.png\" data-src-retina=\"assets/img/demo/pages_icon_2x.png\" height=\"60\" src=\"assets/img/demo/pages_icon_2x.png\" width=\"60\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-3\"></div>\n    <div class=\"col-md-6 text-center\">\n      <h4 class=\"mb-3\">S'enregistrer</h4>\n      <form>\n\n        <div class=\"row\">\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"lastName\">Nom</label>\n            <input type=\"text\" class=\"form-control\" id=\"lastName\" required=\"\">\n          </div>\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"firstName\">Prénom</label>\n            <input type=\"text\" class=\"form-control\" id=\"firstName\" required=\"\">\n          </div>\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"adress\">Adresse</label>\n          <input type=\"text\" class=\"form-control\" id=\"adress\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"phoneNumber\">Numéro de téléphone</label>\n          <input type=\"text\" class=\"form-control\" id=\"phoneNumber\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"email\">Adresse Courriel</label>\n          <input type=\"text\" class=\"form-control\" id=\"email\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"password\">Mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"password\" required=\"\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"passwordConfirm\">Confirmer le mot de passe</label>\n          <input type=\"text\" class=\"form-control\" id=\"passwordConfirm\" required=\"\">\n        </div>\n\n        <button class=\"btn btn-primary btn-lg btn-block\" type=\"submit\">S'enregistrer</button>\n      </form>\n    </div>\n    <div class=\"col-md-3\"></div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
