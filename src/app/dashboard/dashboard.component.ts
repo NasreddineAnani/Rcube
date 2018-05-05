@@ -11,6 +11,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
 
+
+  selection: any;
+  step: any;
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -21,7 +25,8 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.step = 0;
 
   }
+
 }

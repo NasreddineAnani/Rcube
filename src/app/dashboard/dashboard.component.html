@@ -1,21 +1,22 @@
-<section class="row">
-  <div class="jumbotron">
-    <h1>Sélectionner </h1>
-    <br>
-    <div class="row">
-      <div class="col-md-6">
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Jeter/Donner</a></p>
-      </div>
-      <div class="col-md-6">
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Chercher</a></p>
+
+<div class="p-5">
+<div *ngIf="step == 0" class="row animated slideInRight">
+  <div class="card col-12 w-90 p-3">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Sélectionner</h1>
+        <p class="lead text-muted">Comment souhaitez-vous recycler aujourd'hui ?</p>
       </div>
     </div>
+  <div class="card-body text-center">
+    <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
+    <button class="btn btn-lg btn-outline-success" role="button">Chercher</button>
   </div>
-</section>
+  </div>
+</div>
 
-
-<section class="row category">
-  <div class="card w-90 p-3">
+<section *ngIf="step == 1" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3">
     <div class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Catégories</h1>
@@ -25,7 +26,6 @@
 
     <div class="py-5 bg-light">
       <div class="container">
-
         <div class="row">
           <div class="col-md-3">
             <div class="card mb-4 box-shadow">
@@ -49,7 +49,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
+            <div (click)="step = serviceUnavailable" class="card mb-4 box-shadow">
               <div class="card-body">
                 <p> Électroménagers </p>
               </div>
@@ -145,84 +145,134 @@
   </div>
 </section>
 
-<section class="row objectList">
-  <div class="card w-90 p-3">
+<!--<section class="row objectList">-->
+  <!--<div class="card w-90 p-3">-->
+    <!--<div class="jumbotron text-center">-->
+      <!--<div class="container">-->
+        <!--<h1 class="jumbotron-heading">Liste d'objet</h1>-->
+        <!--<p class="lead text-muted">Veuillez choisir l'objet que souhaitez obtenir</p>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="py-5 bg-light">-->
+      <!--<div class="container">-->
+
+        <!--<div class="row">-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow" style="height: 10%;width: 10%">-->
+              <!--<div class="card-body">-->
+                <!--<p> Appareils électroniques </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Pneus </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Huiles et peinture </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Électroménagers </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Métal </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Bois </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Ordures ménagère </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Bac de recyclage </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<div class="card mb-4 box-shadow">-->
+              <!--<div class="card-body">-->
+                <!--<p> Résidus vert </p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-12 text-center">-->
+                <!--<p> Autres </p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+
+<section *ngIf="step == serviceUnavailable" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3" style="">
     <div class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Liste d'objet</h1>
-        <p class="lead text-muted">Veuillez choisir l'objet que souhaitez obtenir</p>
+        <h1 class="jumbotron-heading">Service de prise en charge</h1>
+        <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>
       </div>
     </div>
 
     <div class="py-5 bg-light">
       <div class="container">
-
         <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow" style="height: 10%;width: 10%">
-              <div class="card-body">
-                <p> Appareils électroniques </p>
+          <div class="col-md-6">
+            <div>
+              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <div><p> Coordonnées</p></div>
+                <div><hr></div>
+                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <div><p> Heures d'ouverture</p></div>
+                <div><hr></div>
+                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Pneus </p>
-              </div>
+              <div id="map" style="width:100%;height:400px;"></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Huiles et peinture </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Électroménagers </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Métal </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Bois </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Ordures ménagère </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Bac de recyclage </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <div class="card-body">
-                <p> Résidus vert </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 text-center">
-                <p> Autres </p>
           </div>
         </div>
       </div>
@@ -230,3 +280,5 @@
   </div>
 </section>
 
+
+</div>
