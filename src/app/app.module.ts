@@ -14,8 +14,10 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthGuard } from './services/authGuard.service';
 import { AuthService } from './services/auth.service';
-import { LinksService } from './services/links.service';
+import { ItemsService } from './services/items.service';
 import { UsersService } from './services/users.service';
+import { CentersService } from './services/centers.service';
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent } from './signup/signup.component';
@@ -62,8 +64,9 @@ const appRoutes: Routes = [
   providers: [
     AuthGuard,
     AuthService,
-    LinksService,
-    UsersService
+    ItemsService,
+    UsersService,
+    CentersService
   ],
   bootstrap: [AppComponent]
 })
