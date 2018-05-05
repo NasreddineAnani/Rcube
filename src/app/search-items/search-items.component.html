@@ -8,8 +8,8 @@
     <div class="col-md-8 col-12">
       <div class="row pl-4">
 
-        <div class="col-12 col-md-6">
-          <div (click)="currentItem = item" *ngFor="let item of items" class="card m-2 box-shadow">
+        <div *ngFor="let item of items" class="col-12 col-md-6">
+          <div (click)="currentItem = item"  class="card m-2 box-shadow">
             <img class="card-img-top img-item" src="{{item.image}}" alt="{{item.title}}" />
             <div class="card-body">
               <h4> {{item.title}} </h4>
