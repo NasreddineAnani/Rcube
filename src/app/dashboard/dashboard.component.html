@@ -29,7 +29,7 @@
       <div class="container">
         <div class="row">
           <div *ngFor="let cat of categories" class="col-md-3">
-            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow" style="background-image: url({{cat.image}})">
+            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow"">
               <img class="img-cat" src="{{cat.image}}">
               <div class="card-body">
                 <p> {{cat.name}} </p>
@@ -39,7 +39,6 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <section *ngIf="step == 2" class="row category animated slideInRight">
