@@ -1,19 +1,22 @@
+<div class="p-5">
 
-<div class="jumbotron">
-  <h1>Sélectionner </h1>
-  <br>
-  <div class="row">
-    <div class="col-md-6">
-      <p><a class="btn btn-lg btn-success" href="#" role="button">Jeter/Donner</a></p>
+<div *ngIf="step === 0" class="row animated slideInRight">
+  <div class="card col-12 w-90 p-3">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Sélectionner</h1>
+        <p class="lead text-muted">Comment souhaitez-vous recycler aujourd'hui ?</p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <p><a class="btn btn-lg btn-success" href="#" role="button">Chercher</a></p>
-    </div>
+  <div class="card-body text-center">
+    <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
+    <button class="btn btn-lg btn-outline-success" role="button">Chercher</button>
+  </div>
   </div>
 </div>
 
-<section class="row category">
-  <div class="card w-90 p-3">
+<section *ngIf="step === 1" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3">
     <div class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Catégories</h1>
@@ -23,7 +26,6 @@
 
     <div class="py-5 bg-light">
       <div class="container">
-
         <div class="row">
           <div class="col-md-3">
             <div class="card mb-4 box-shadow">
@@ -145,3 +147,4 @@
 
 </section>
 
+</div>
