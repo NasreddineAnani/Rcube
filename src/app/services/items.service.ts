@@ -104,7 +104,7 @@ export class ItemsService {
       body['coord'] = res['users'][0].coord;
       body['address'] = res['users'][0].address;
       body['email'] = this.authService.currentUser().email;
-      body['phoneNumber'] = this.authService.currentUser().phoneNumber;
+      body['phoneNumber'] = res['users'][0].phoneNumber;
 
       const contentHeaders = new Headers();
       contentHeaders.append('Accept', 'application/json');
