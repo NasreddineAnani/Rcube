@@ -16,6 +16,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(this.authService.currentUser()){
+      this.router.navigate(['dashboard']);
+    }
   }
 
   login(email, password) {

@@ -20,26 +20,16 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router,
               private route: ActivatedRoute,
               private itemsService: ItemsService,
-              private usersService: UsersService) { }
+              private usersService: UsersService,
+              private authService: AuthService) { }
 
   ngOnInit() {
+    if(this.authService.currentUser()){
+      this.router.navigate(['dashboard']);
+    }
     this.empty = false;
     this.loading = true;
 
-    this.route.params.subscribe(params => {
-      this.username = params['id'];
-
-      this.usersService.getUserByUsername(this.username).then( res => {
-        if((<any>res).length == 0){
-          this.loading = false;
-          this.empty = true;
-        } else {
-          this.user = (<any>res)[0];
-        }
-      }).catch(err => {
-        console.log(err);
-      });
-    });
   }
 
 }

@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getNextStep(categorie) {
-    if(categorie.reuse) {
+    if(!categorie.reuse) {
       this.currentCategorie = categorie;
       this.step = 2;
     }
