@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="173px" height="199px" viewBox="0 0 173 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#AFF996" offset="0%"></stop>
+            <stop stop-color="#3BBE7B" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.2228727%" y1="18.2852126%" x2="4.47237305%" y2="98.4229627%" id="linearGradient-2">
+            <stop stop-color="#2C946A" offset="0%"></stop>
+            <stop stop-color="#23704D" offset="49.5719106%"></stop>
+            <stop stop-color="#2A8556" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#AFF996" stop-opacity="0.419950181" offset="0%"></stop>
+            <stop stop-color="#3BBE7B" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(0.000000, -1.000000)">
+            <g id="Group-2">
+                <path d="M90.5035547,2.31419349 L169.003555,47.689916 C171.47676,49.1195144 173,51.7594076 173,54.6160657 L173,145.383934 C173,148.240592 171.47676,150.880486 169.003555,152.310084 L90.5035547,197.685807 C88.02654,199.117607 84.97346,199.117607 82.4964453,197.685807 L3.99644527,152.310084 C1.52324006,150.880486 7.4956827e-14,148.240592 7.46069873e-14,145.383934 L0,54.6160657 C-5.42428388e-15,51.7594076 1.52324006,49.1195144 3.99644527,47.689916 L82.4964453,2.31419349 C84.97346,0.882393071 88.02654,0.882393071 90.5035547,2.31419349 Z" id="Polygon" fill="url(#linearGradient-1)"></path>
+                <path d="M90.1499583,89.1557609 L173,131.634512 L173,145.748277 C173,148.602465 171.479371,151.240465 169.009541,152.670963 L90.5095407,198.137266 C88.0294875,199.573685 84.9705125,199.573685 82.4904593,198.137266 L3.99045929,152.670963 C1.52062864,151.240465 6.09863112e-14,148.602465 4.79616347e-14,145.748277 L0,131.634512 L82.8500417,89.1557609 C85.1415278,87.9808735 87.8584722,87.9808735 90.1499583,89.1557609 Z" id="Polygon" fill="url(#linearGradient-2)"></path>
+            </g>
+            <g id="Group-3" transform="translate(86.911649, 100.474403) rotate(-50.000000) translate(-86.911649, -100.474403) translate(60.411649, 37.974403)">
+                <ellipse id="Oval" fill="#D9D9D9" cx="23.5207101" cy="31.1720698" rx="23.5207101" ry="31.1720698"></ellipse>
+                <ellipse id="Oval" fill="#F4F4F4" cx="29.4792899" cy="31.1720698" rx="23.5207101" ry="31.1720698"></ellipse>
+                <ellipse id="Oval" fill="url(#linearGradient-3)" cx="29.6360947" cy="31.1720698" rx="19.6005917" ry="25.872818"></ellipse>
+                <polygon id="Rectangle-3" fill="#F4F4F4" points="25.7159763 60.1620948 33.556213 60.1620948 33.556213 120.075641 25.7159763 125"></polygon>
+                <polygon id="Rectangle-3" fill="#D9D9D9" points="21.0118343 62.032419 25.7159763 62.032419 25.7159763 124.998192 21.0118343 122.35642"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

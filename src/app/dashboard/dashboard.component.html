@@ -11,7 +11,7 @@
   </div>
 
   <div *ngIf="step === 0" class="pt-2 row animated fadeIn">
-    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Sélectionner</h1>
@@ -23,21 +23,21 @@
       <div class="row text-center">
         <div class="card col m-3 text-center h-100 shadow border-0">
           <div class="card-body">
-            <img (click)="redirectHome()" src="../../assets/img/logo.svg" class="logoStyle m-4">
-            <h4 class="m-4">Trouver la façon la plus écologique <br>
-              de disposer de vos déchets, matériaux et articles réutilisables</h4>
+            <img (click)="redirectHome()" src="../../assets/img/logoBoxRecyclage.svg" class="logoStyle m-4">
+            <h5 class="m-4">Trouver la façon la plus écologique <br>
+              de disposer de vos déchets ou articles réutilisables</h5>
             <div class="text-center">
-              <button (click)="step = 1" class="btn btn-lg btn-success m-4 w-50 text-center" role="button">Jeter ou donner</button>
+              <button (click)="step = 1" class="btn btn-lg btn-success m-4 w-50 text-center" role="button">Disposer</button>
             </div>
           </div>
         </div>
 
         <div class="card col m-3 text-center h-100 shadow border-0">
           <div class="card-body ">
-            <img (click)="redirectHome()" src="../../assets/img/logo.svg" class="logoStyle m-4">
-            <h4 class="m-4">Découvrir les différents articles <br>
-              réutilisable à donner près de chez vous
-            </h4>
+            <img (click)="redirectHome()" src="../../assets/img/logoLoupe.svg" class="logoStyle m-4">
+            <h5 class="m-4">Découvrir une panoplie d'articles différents
+              réutilisables à donner près de chez vous
+            </h5>
             <div class="text-center">
               <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success m-4 w-50 text-center" role="button">Chercher</button>
             </div>
@@ -48,13 +48,13 @@
       </div>
   </div>
   </div>
-
-  <section *ngIf="step == 1" class="row category animated fadeIn">
-    <div class="col-12 card w-90 p-3">
+  <section *ngIf="step == 1" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3 shadow border-0">
       <h1>Jeter ou donner</h1>
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
+          <hr class="style14">
           <p class="lead text-muted">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>
         </div>
       </div>
@@ -62,8 +62,10 @@
       <div class="py-5 bg-light">
         <div class="container">
           <div class="row">
+
+
             <div *ngFor="let cat of categories" class="col-md-3">
-              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 box-shadow">
+              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 shadow border-0">
                 <img class="img-cat" src="{{cat.image}}">
                 <div class="card-body">
                   <p> {{cat.name}} </p>
@@ -77,19 +79,19 @@
   </section>
 
   <!--ecocentre-->
-  <section *ngIf="step == 2" class="row category animated fadeIn">
-    <div class="col-12 card w-90 p-3 shadow" style="">
+  <section *ngIf="step == 2" class="category animated slideInRight">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
+          <hr class="style14">
           <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez
             vous.</p>
         </div>
       </div>
 
-      <div class="py-5 bg-light">
-        <div class="container">
-          <div class="row">
+      <div class="card col-12 text-center shadow border-0">
+        <div class="card-body container row">
             <div class="col-md-6">
               <div style="padding-left: 0.5em">
                 <p class="titre"> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
@@ -116,15 +118,14 @@
 
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!--  book-->
-  <section *ngIf="step == 3" class="row category animated fadeIn">
-    <div class="col-12 card w-90 p-3" style="">
+  <section *ngIf="step == 3" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3 shadow border-0">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
@@ -138,27 +139,39 @@
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
+
+
+
+              <div class="form-group row">
+                <label for="example-date-input" class="col-12 col-form-label">Date de prise en charge à votre domicile</label>
+                <div class="col-12">
+                  <input class="form-control" type="date" value="2018-05-06" id="example-date-input">
+                </div>
+              </div>
+
               <form>
                 <div class="mb-3">
                   <label>Dimension de l'objet à prendre en charge</label>
                   <div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio">Petit
+                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio" > Petit ( < 30 cm<sup>3</sup>)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio">Moyen
+                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio"> Moyen ( < 1 m<sup>3</sup>)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio">Grand
+                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio"> Grand ( < 3 m<sup>3</sup>)
                       </label>
                     </div>
                   </div>
                 </div>
+
+
                 <div class="mb-3">
                   <label for="serviceDate">Date de prise en charge à votre domicile</label>
                   <input  #date type="date" id="serviceDate">
