@@ -14,6 +14,10 @@ router.get('/centers', function (req, res) {
   // get nearest center wit adress
 });
 
+// get when thash coming by address
+router.get('/trashDay', function (req, res) {
+  // get nearest center wit adress
+});
 
 
 

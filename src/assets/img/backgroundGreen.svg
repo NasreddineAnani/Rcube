@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="771px" viewBox="0 0 1440 771" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#BCFF9A" offset="0%"></stop>
+            <stop stop-color="#3BBE50" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M-1.39670714,27 C322.609963,57.3070952 563.451986,72.4606428 721.129362,72.4606428 C878.806737,72.4606428 1118.18277,57.3070952 1439.25747,27 C1440.24751,379.462395 1440.24751,555.840285 1439.25747,556.133668 C1438.39544,556.389122 1078.46633,658.608375 718,659.61439 C362.6488,660.606129 5.9926726,579.873824 -1.39670714,575.589593 C-4.86776429,573.577136 -4.86776429,390.713938 -1.39670714,27 Z" id="Path" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

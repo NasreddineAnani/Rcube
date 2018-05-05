@@ -1,8 +1,13 @@
-.body {
-  height: 100%;
-  width: 100%;
+.buttonWhite{
+  background-color: white;
+  border-color: #288052;
+  border-radius: 1.85rem;
+  color: #288052;
 }
 
-* {
+.buttonColor{
+  border-radius: 1.85rem;
+  background-color: #288052;
+  color: white;
   font-family: 'Open Sans', sans-serif;
 }

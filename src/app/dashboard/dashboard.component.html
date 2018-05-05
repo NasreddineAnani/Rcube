@@ -22,6 +22,20 @@
         <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
         <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success" role="button">Chercher</button>
       </div>
+      <div class="row">
+        <div class="card col m-3 text-center">
+          <div class="card-body">
+            <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
+            <h3>Trouver la meilleur façon de disposer de vos objets</h3>
+          </div>
+        </div>
+
+        <div class="card col m-3 text-center">
+          <div class="card-body">
+            <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success text-center" role="button">Chercher</button>
+            <h3>Voir les différents objets à donner</h3>
+          </div>
+      </div>
     </div>
   </div>
 
@@ -169,8 +183,7 @@
               <div>
                 <hr>
               </div>
-              <div style="text-align: center"><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi
-                : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
+              <div style="text-align: center"><p>Lundi<br>Mardi<br>Jeudi<br></p></div>
             </div>
             <div class="col-md-3"></div>
           </div>
