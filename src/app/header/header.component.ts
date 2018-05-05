@@ -35,4 +35,8 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  redirectHome() {
+    this.router.navigate(['']);
+  }
+
 }

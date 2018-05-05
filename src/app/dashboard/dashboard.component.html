@@ -76,7 +76,7 @@
 
   <!--ecocentre-->
   <section *ngIf="step == 2" class="row category animated slideInRight">
-    <div class="col-12 card w-90 p-3" style="">
+    <div class="col-12 card w-90 p-3 shadow" style="">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
@@ -89,35 +89,19 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <div>
-                <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
+              <div style="padding-left: 0.5em">
+                <p class="titre"> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
               </div>
               <hr>
-              <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6">
-                  <div><p> Coordonnées</p></div>
-                  <div>
-                    <hr>
-                  </div>
-                  <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
-                </div>
+              <div class="col-md-12">
+                <div><p class="titre"> Adresse de l'écocentre le plus proche de chez vous</p></div>
+                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
               </div>
               <hr>
-              <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6">
-                  <div><p> Heures d'ouverture</p></div>
-                  <div>
-                    <hr>
-                  </div>
-                  <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi
-                    : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
-                </div>
+              <div class="col-md-12">
+                <div><p class="titre"> Heures d'ouverture</p></div>
+                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi
+                  : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
               </div>
             </div>
             <div class="col-md-6">
@@ -235,20 +219,21 @@
               <form>
 
                 <div class="mb-3">
-                  <label for="objectTitle">Titre de l'annonce</label>
+                  <label for="objectTitle" class="label-form">Titre de l'annonce</label>
                   <input #titleItem type="text" class="form-control" id="objectTitle" required="">
                 </div>
 
                 <div class="mb-3">
-                  <label for="objectDescription">Description de l'objet</label>
+                  <label for="objectDescription" class="label-form">Description de l'objet</label>
                   <input  #descriptionItem type="text" class="form-control" id="objectDescription" required="">
                 </div>
 
                 <div class="form-group">
-                  <label >Importer une photo de l'objet</label>
+                  <label class="label-form">Importer une photo de l'objet</label>
                   <ngx-uploadcare-widget
                     images-only="true"
                     public-key="c49dd3401f80bb6419e1"
+                    class="float-right"
                     (on-upload-complete)="onUpload($event)">
                   </ngx-uploadcare-widget>
                 </div>

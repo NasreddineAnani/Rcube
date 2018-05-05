@@ -15,8 +15,17 @@ agm-map {
   overflow: hidden;
 }
 
-hr.style1{
+
+hr.style1 {
   border-top: 1px solid #8c8b8b;
-  width:40px;
-  border:20px;
+  width: 40px;
+  border: 20px;
+}
+
+.label-form {
+  font-size: 1.2em;
+}
+
+.titre {
+  font-size: x-large;
 }
