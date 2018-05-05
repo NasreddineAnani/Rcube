@@ -11,8 +11,6 @@ agm-map {
 }
 .img-cat {
   object-fit: cover;
-  height: auto;
-  width: auto;
-  max-width: 400px;
-  max-height: 400px;
+  max-height: 200px;
+  overflow: hidden;
 }
