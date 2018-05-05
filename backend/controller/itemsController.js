@@ -17,8 +17,9 @@ router.get('/items/:id', function (req, res) {
 router.get('/items', function (req, res) {
   var email = req.query.email;
   var username = req.query.username;
-  var categorie = req.query.categorie;
+  var categories = req.query.categories;
 
+  console.log(categories);
 
   var researchBy = 'email';
   var researchTerm = req.query.email;
@@ -28,9 +29,9 @@ router.get('/items', function (req, res) {
     var researchTerm = req.query.username;
   }
 
-  if(categorie) {
-    var researchBy = 'categorie';
-    var researchTerm = req.query.categorie;
+  if(categories) {
+    var researchBy = 'categories';
+    var researchTerm = req.query.categories;
   }
 
 

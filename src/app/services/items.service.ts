@@ -84,7 +84,7 @@ export class ItemsService {
       contentHeaders.append('Accept', 'application/json');
       contentHeaders.append('Content-Type', 'application/json');
 
-      this.http.get(`/items?categorie=${categorie}`, {headers: contentHeaders})
+      this.http.get(`/items?categories=${categorie}`, {headers: contentHeaders})
         .map(res => res.json())
         .catch((error: any) => {
           reject(error.json().error || 'Server error');
@@ -104,6 +104,7 @@ export class ItemsService {
       body['coord'] = res['users'][0].coord;
       body['address'] = res['users'][0].address;
       body['email'] = this.authService.currentUser().email;
+      body['phoneNumber'] = this.authService.currentUser().phoneNumber;
 
       const contentHeaders = new Headers();
       contentHeaders.append('Accept', 'application/json');
