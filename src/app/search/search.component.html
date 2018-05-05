@@ -14,7 +14,7 @@
         <div class="container">
           <div class="row">
             <div *ngFor="let cat of searchCategories" class="col-md-3">
-              <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
+              <div (click)="getItemCategorie(cat)" class="card mb-4 box-shadow">
                 <div class="card-body">
                   <p> {{cat.name}} </p>
                 </div>

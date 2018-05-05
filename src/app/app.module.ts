@@ -19,6 +19,7 @@ import { UsersService } from './services/users.service';
 import { CentersService } from './services/centers.service';
 import { CategoriesService } from './services/categories.service';
 import { SearchCategoriesService } from './services/search-categories.service';
+import { PickupService } from './services/pickup.service';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -83,7 +84,8 @@ const appRoutes: Routes = [
     UsersService,
     CentersService,
     CategoriesService,
-    SearchCategoriesService
+    SearchCategoriesService,
+    PickupService
   ],
   bootstrap: [AppComponent]
 })
