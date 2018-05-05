@@ -32,6 +32,7 @@ const imageService = {
 
         for (let image of res.hits) {
           images.images.push({
+            previewUrl : image.previewURL,
             url : image.webformatURL,
             id: image.id
           })
