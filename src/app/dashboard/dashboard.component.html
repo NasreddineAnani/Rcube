@@ -11,7 +11,7 @@
   </div>
 
   <div *ngIf="step === 0" class="pt-2 row animated fadeIn">
-    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 p-3 border-0 shadow mx-auto">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 p-3 border-0 shadow mx-auto bgCard">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Sélectionner</h1>
@@ -39,7 +39,7 @@
               réutilisables à donner près de chez vous
             </h5>
             <div class="text-center">
-              <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success m-4 w-50 text-center" role="button">Chercher</button>
+              <button [routerLink]="['/search']" class="btn btn-lg btn-success m-4 w-50 text-center" role="button">Chercher</button>
             </div>
           </div>
         </div>

@@ -3,9 +3,9 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4">
   <h5 class="my-0 mr-md-auto font-weight-normal"><img (click)="redirectHome()" src="../../assets/img/logo.svg" class="logoStyle"></h5>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a [routerLink]="['/register']" *ngIf="!isLogged" class="p-2 text-dark" >S'enregistrer</a>
+    <a [routerLink]="['/register']" *ngIf="!isLogged" class="btn btn-success text-white" >S'enregistrer</a>
     <a *ngIf="isLogged" class="p-2 text-dark" >{{currentUser.email}}</a>
   </nav>
-  <a [routerLink]="['/login']" *ngIf="!isLogged" class="btn btn-outline-primary" >Se connecter</a>
-  <a (click)="logout()" *ngIf="isLogged" class="btn btn-outline-primary" >Se déconnecter</a>
+  <a [routerLink]="['/login']" *ngIf="!isLogged" class="btn btn-outline-success" >Se connecter</a>
+  <a (click)="logout()" *ngIf="isLogged" class="btn btn-outline-success" >Se déconnecter</a>
 </div>
