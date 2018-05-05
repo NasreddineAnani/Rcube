@@ -39,7 +39,7 @@ export class CentersService {
       contentHeaders.append('Accept', 'application/json');
       contentHeaders.append('Content-Type', 'application/json');
 
-      this.http.get(`/centers?address=${address}`, {headers: contentHeaders})
+      this.http.get(`/nearestCenter?address=${address}`, {headers: contentHeaders})
         .map(res => res.json())
         .catch((error: any) => {
           reject(error.json().error || 'Server error');
