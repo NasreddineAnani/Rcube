@@ -6,6 +6,9 @@
   max-height: 400px;
 }
 
+agm-map {
+  height: 100%;
+}
 .img-cat {
   object-fit: cover;
   max-height: 200px;
