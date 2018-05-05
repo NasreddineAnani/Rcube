@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="173px" height="199px" viewBox="0 0 173 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#AFF996" offset="0%"></stop>
+            <stop stop-color="#3BBE7B" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.2228727%" y1="18.2852126%" x2="4.47237305%" y2="98.4229627%" id="linearGradient-2">
+            <stop stop-color="#2C946A" offset="0%"></stop>
+            <stop stop-color="#23704D" offset="49.5719106%"></stop>
+            <stop stop-color="#2A8556" offset="100%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(0.000000, -1.000000)">
+            <g id="Group-8">
+                <g id="Group-2">
+                    <path d="M90.5035547,2.31419349 L169.003555,47.689916 C171.47676,49.1195144 173,51.7594076 173,54.6160657 L173,145.383934 C173,148.240592 171.47676,150.880486 169.003555,152.310084 L90.5035547,197.685807 C88.02654,199.117607 84.97346,199.117607 82.4964453,197.685807 L3.99644527,152.310084 C1.52324006,150.880486 7.4956827e-14,148.240592 7.46069873e-14,145.383934 L0,54.6160657 C-5.42428388e-15,51.7594076 1.52324006,49.1195144 3.99644527,47.689916 L82.4964453,2.31419349 C84.97346,0.882393071 88.02654,0.882393071 90.5035547,2.31419349 Z" id="Polygon" fill="url(#linearGradient-1)"></path>
+                    <path d="M90.1499583,89.1557609 L173,131.634512 L173,145.748277 C173,148.602465 171.479371,151.240465 169.009541,152.670963 L90.5095407,198.137266 C88.0294875,199.573685 84.9705125,199.573685 82.4904593,198.137266 L3.99045929,152.670963 C1.52062864,151.240465 5.38808838e-14,148.602465 4.08562073e-14,145.748277 L0,131.634512 L82.8500417,89.1557609 C85.1415278,87.9808735 87.8584722,87.9808735 90.1499583,89.1557609 Z" id="Polygon" fill="url(#linearGradient-2)"></path>
+                </g>
+                <g id="Group-7" transform="translate(29.000000, 35.000000)">
+                    <polygon id="Rectangle-4" fill="#EDECEC" points="0 37.0603015 46.6065353 62.1859296 46.6065353 125 0 99.8743719"></polygon>
+                    <polygon id="Rectangle-4" fill="#FAFAFA" points="46.6065353 62.1859296 107.505741 37.0603015 107.505741 99.8743719 46.6065353 125"></polygon>
+                    <polygon id="Rectangle-5" fill="#FFFFFF" transform="translate(24.856819, 48.994975) rotate(-45.000000) translate(-24.856819, -48.994975) " points="15.6291956 22.7893844 18.70507 24.121872 19.4634851 26.6797918 33.3009271 72.6004107 34.084442 75.2005654 31.0085676 73.8680777"></polygon>
+                    <polygon id="Rectangle-5" fill="#FFFFFF" transform="translate(76.999130, 48.848859) rotate(84.700000) translate(-76.999130, -48.848859) " points="66.6791729 19.4169505 68.2044677 17.0552599 87.3190854 80.6424561 84.9294232 79.7788573 80.8167856 66.1752747"></polygon>
+                    <polygon id="Rectangle-5" fill="#FFFFFF" transform="translate(82.648923, 25.125628) rotate(-45.000000) translate(-82.648923, -25.125628) " points="73.4212993 -1.07996237 76.4971737 0.252525285 91.8765457 51.3312186 88.8006713 49.998731 88.0015817 47.3447569 74.2303731 1.60717139"></polygon>
+                    <polygon id="Rectangle-5" fill="#FFFFFF" transform="translate(32.510822, 25.127619) rotate(84.700000) translate(-32.510822, -25.127619) " points="22.2976826 -4.05207438 23.8229774 -6.41376495 24.5952046 -3.83642467 42.7239459 56.6690015 40.5093604 56.3647707"></polygon>
+                    <polygon id="Triangle" fill="#EDECEC" points="60.2777856 14.4472362 101.912957 37.0603015 60.3154443 54.2967496 59.6846528 54.558126 60.2777856 54.2964839"></polygon>
+                    <polygon id="Rectangle-6" fill="#FAFAFA" points="5.43120884 37.0603015 60.2777856 14.4472362 60.2840059 54.2901964 47.3398069 59.648255"></polygon>
+                    <g id="Group-6" transform="translate(77.677559, 81.344221) rotate(-19.000000) translate(-77.677559, -81.344221) translate(60.277786, 65.326633)" fill="#76CA81">
+                        <g id="Group-5" transform="translate(8.699887, 0.000000)">
+                            <polygon id="Triangle-2" transform="translate(15.875335, 8.393423) rotate(135.000000) translate(-15.875335, -8.393423) " points="15.8753347 5.43218857 19.6670528 11.3546581 12.0836166 11.3546581"></polygon>
+                            <rect id="Rectangle-7" transform="translate(12.821515, 4.815991) rotate(135.000000) translate(-12.821515, -4.815991) " x="10.6307447" y="0.571554621" width="4.38154094" height="8.48887294"></rect>
+                            <polygon id="Triangle-3" points="8.77783157 3.55348169 11.8078324 0 5.74613364 0"></polygon>
+                            <polygon id="Rectangle-7" transform="translate(4.732517, 4.815991) rotate(45.000000) translate(-4.732517, -4.815991) " points="2.54174605 0.571554621 6.8305728 0.571554621 6.92328699 0.571554621 6.92328699 9.06042756 2.54174605 9.06042756"></polygon>
+                        </g>
+                        <g id="Group-5" transform="translate(27.963921, 21.356784) rotate(90.000000) translate(-27.963921, -21.356784) translate(17.399773, 14.447236)">
+                            <polygon id="Triangle-2" transform="translate(15.875335, 8.393423) rotate(135.000000) translate(-15.875335, -8.393423) " points="15.8753347 5.43218857 19.6670528 11.3546581 12.0836166 11.3546581"></polygon>
+                            <rect id="Rectangle-7" transform="translate(12.821515, 4.815991) rotate(135.000000) translate(-12.821515, -4.815991) " x="10.6307447" y="0.571554621" width="4.38154094" height="8.48887294"></rect>
+                            <polygon id="Triangle-3" points="8.77783157 3.55348169 11.8078324 0 5.74613364 0"></polygon>
+                            <polygon id="Rectangle-7" transform="translate(4.732517, 4.815991) rotate(45.000000) translate(-4.732517, -4.815991) " points="2.54174605 0.571554621 6.8305728 0.571554621 6.92328699 0.571554621 6.92328699 9.06042756 2.54174605 9.06042756"></polygon>
+                        </g>
+                        <g id="Group-5" transform="translate(6.835625, 16.959799) rotate(-90.000000) translate(-6.835625, -16.959799) translate(-3.728523, 10.050251)">
+                            <polygon id="Triangle-2" transform="translate(15.875335, 8.393423) rotate(135.000000) translate(-15.875335, -8.393423) " points="15.8753347 5.43218857 19.6670528 11.3546581 12.0836166 11.3546581"></polygon>
+                            <rect id="Rectangle-7" transform="translate(12.821515, 4.815991) rotate(135.000000) translate(-12.821515, -4.815991) " x="10.6307447" y="0.571554621" width="4.38154094" height="8.48887294"></rect>
+                            <polygon id="Triangle-3" points="8.77783157 3.55348169 11.8078324 0 5.74613364 0"></polygon>
+                            <polygon id="Rectangle-7" transform="translate(4.732517, 4.815991) rotate(45.000000) translate(-4.732517, -4.815991) " points="2.54174605 0.571554621 6.8305728 0.571554621 6.92328699 0.571554621 6.92328699 9.06042756 2.54174605 9.06042756"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
