@@ -17,6 +17,7 @@ import { AuthService } from './services/auth.service';
 import { ItemsService } from './services/items.service';
 import { UsersService } from './services/users.service';
 import { CentersService } from './services/centers.service';
+import { CategoriesService } from './services/categories.service';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -68,7 +69,8 @@ const appRoutes: Routes = [
     AuthService,
     ItemsService,
     UsersService,
-    CentersService
+    CentersService,
+    CategoriesService
   ],
   bootstrap: [AppComponent]
 })
