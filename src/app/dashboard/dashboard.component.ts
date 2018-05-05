@@ -20,8 +20,8 @@ export class DashboardComponent implements OnInit {
   selection: any;
   step: any;
   pickUpSize: any;
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number = 45.5577848;
+  lng: number = -73.8714164;
   imageItem: any;
   categorie: any;
 
