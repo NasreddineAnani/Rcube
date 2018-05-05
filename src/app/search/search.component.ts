@@ -30,11 +30,8 @@ export class SearchComponent implements OnInit {
     this.step = 1;
   }
 
-  getNextStep(searchCategories) {
-    if (searchCategories.reuse) {
-      this.currentCategorie = searchCategories;
-      this.step = 2;
-    }
+  getItemCategorie(searchCategories) {
+    this.router.navigate(['searchItems']);
   }
 
 }

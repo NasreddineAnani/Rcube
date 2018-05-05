@@ -1,180 +1,208 @@
+<div class="pt-0 pl-5 pr-5 pb-5">
 
-<div class="p-5">
-<div *ngIf="step == 0" class="row animated slideInRight">
-  <div class="card col-12 w-90 p-3">
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Sélectionner</h1>
-        <p class="lead text-muted">Comment souhaitez-vous recycler aujourd'hui ?</p>
-      </div>
+  <div *ngIf="alert" class="p-2">
+    <div class="alert alert-success" role="alert">
+      <strong>Super!</strong> {{alert}}
     </div>
-  <div class="card-body text-center">
-    <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
-    <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success" role="button">Chercher</button>
   </div>
+
+  <div *ngIf="step !== 0" class="p-2">
+    <button (click)="step = 0" class="btn btn-success">Retour</button>
   </div>
-</div>
 
-<section *ngIf="step === 1" class="row category animated slideInRight">
-  <div class="col-12 card w-90 p-3">
-    <h1>Jeter ou donner</h1>
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Catégories</h1>
-        <p class="lead text-muted">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>
-      </div>
-    </div>
-
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div *ngFor="let cat of categories" class="col-md-3">
-            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
-              <img class="img-cat" src="{{cat.image}}">
-              <div class="card-body">
-                <p> {{cat.name}} </p>
-              </div>
-            </div>
-          </div>
+  <div *ngIf="step === 0" class="pt-2 row animated slideInRight">
+    <div class="card col-12 w-90 p-3">
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Sélectionner</h1>
+          <p class="lead text-muted">Comment souhaitez-vous recycler aujourd'hui ?</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-  <!--ecocentre-->
-<section *ngIf="step == 2" class="row category animated slideInRight">
-  <div class="col-12 card w-90 p-3" style="">
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Service de prise en charge</h1>
-        <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>
+      <div class="card-body text-center">
+        <button (click)="step = 1" class="btn btn-lg btn-success" role="button">Jeter ou donner</button>
+        <button [routerLink]="['/search']" class="btn btn-lg btn-outline-success" role="button">Chercher</button>
       </div>
     </div>
+  </div>
 
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div>
-              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-6">
-
-              </div>
-              <div class="col-md-6">
-                <div><p> Coordonnées</p></div>
-                <div><hr></div>
-                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-6">
-
-              </div>
-              <div class="col-md-6">
-                <div><p> Heures d'ouverture</p></div>
-                <div><hr></div>
-                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card mb-4 box-shadow">
-              <div id="map" style="width:100%;height:400px;">
-                <agm-map [latitude]="lat" [longitude]="lng">
-                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-                </agm-map>
-              </div>
-
-            </div>
-          </div>
+  <section *ngIf="step === 1" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3">
+      <h1>Jeter ou donner</h1>
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Catégories</h1>
+          <p class="lead text-muted">Veuillez choisir la catégorie correspondant à l'objet que souhaitez disposer</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!--  book-->
-<section *ngIf="step == 3" class="row category animated slideInRight">
-  <div class="col-12 card w-90 p-3" style="">
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
-        <p class="lead text-muted">Veuiller remplir le formulaire suivant afin de profiter du service de prise en charge à domicile offert par votre municipalité.</p>
-      </div>
-    </div>
-
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label>Dimension de l'objet à prendre en charge</label>
-                <div>
-                  <label class="radio-inline">
-                    <input type="radio" name="optradio">Petit
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="optradio">Moyen
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="optradio">Grand
-                  </label>
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div *ngFor="let cat of categories" class="col-md-3">
+              <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
+                <img class="img-cat" src="{{cat.image}}">
+                <div class="card-body">
+                  <p> {{cat.name}} </p>
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="serviceDate">Date de prise en charge à votre domicile</label>
-                <input type="date" id="serviceDate">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--ecocentre-->
+  <section *ngIf="step == 2" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3" style="">
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Service de prise en charge</h1>
+          <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez
+            vous.</p>
+        </div>
+      </div>
+
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
               </div>
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
-            </form>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                  <div><p> Coordonnées</p></div>
+                  <div>
+                    <hr>
+                  </div>
+                  <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                  <div><p> Heures d'ouverture</p></div>
+                  <div>
+                    <hr>
+                  </div>
+                  <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi
+                    : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 box-shadow">
+                <div id="map" style="width:100%;height:400px;">
+                  <agm-map [latitude]="lat" [longitude]="lng">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                  </agm-map>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="col-md-3"></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--  service d'ordure-->
-<section *ngIf="step == 4" class="row category animated slideInRight">
-  <div class="col-12 card w-90 p-3" style="">
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
-        <p class="lead text-muted">Votre municipalité s'occupe de la prise en charge de ce type de matières résiduelles.</p>
+  <!--  book-->
+  <section *ngIf="step == 3" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3" style="">
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
+          <p class="lead text-muted">Veuiller remplir le formulaire suivant afin de profiter du service de prise en
+            charge à domicile offert par votre municipalité.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <div style="text-align: center"><p> Horaire de la prise en charge</p></div>
-            <div><hr></div>
-            <div style="text-align: center"><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <form>
+                <div class="mb-3">
+                  <label>Dimension de l'objet à prendre en charge</label>
+                  <div>
+                    <div>
+                      <label class="radio-inline">
+                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio">Petit
+                      </label>
+                    </div>
+                    <div>
+                      <label class="radio-inline">
+                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio">Moyen
+                      </label>
+                    </div>
+                    <div>
+                      <label class="radio-inline">
+                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio">Grand
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="serviceDate">Date de prise en charge à votre domicile</label>
+                  <input  #date type="date" id="serviceDate">
+                </div>
+                <button (click)="bookPickUp(date.value)" class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+              </form>
+            </div>
+            <div class="col-md-3"></div>
           </div>
-          <div class="col-md-3"></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--  donner-->
+  <!--  service d'ordure-->
+  <section *ngIf="step == 4" class="row category animated slideInRight">
+    <div class="col-12 card w-90 p-3" style="">
+      <div class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
+          <p class="lead text-muted">Votre municipalité s'occupe de la prise en charge de ce type de matières
+            résiduelles.</p>
+        </div>
+      </div>
+
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div style="text-align: center"><p> Horaire de la prise en charge</p></div>
+              <div>
+                <hr>
+              </div>
+              <div style="text-align: center"><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi
+                : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  donner-->
   <section *ngIf="step == 5" class="row category animated slideInRight">
     <div class="col-12 card w-90 p-3" style="">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Offrir l'objet à disposer</h1>
-          <p class="lead text-muted">Veuiller remplir le formulaire suivant afin d'offrir votre objet à un autre citoyen qui souhaiterait l'acquérir gratuitement.</p>
+          <p class="lead text-muted">Veuiller remplir le formulaire suivant afin d'offrir votre objet à un autre citoyen
+            qui souhaiterait l'acquérir gratuitement.</p>
         </div>
       </div>
 
@@ -187,20 +215,20 @@
 
                 <div class="mb-3">
                   <label for="objectTitle">Titre de l'annonce</label>
-                  <input type="text" class="form-control" id="objectTitle" required="">
+                  <input #titleItem type="text" class="form-control" id="objectTitle" required="">
                 </div>
 
                 <div class="mb-3">
                   <label for="objectDescription">Description de l'objet</label>
-                  <input type="text" class="form-control" id="objectDescription" required="">
+                  <input  #descriptionItem type="text" class="form-control" id="objectDescription" required="">
                 </div>
 
                 <div class="form-group">
                   <label for="objectPicture">Importer une photo de l'objet</label>
-                  <input type="file" class="form-control-file" id="objectPicture">
+                  <input #fileInput (change)="onFileChange($event)" type="file" class="form-control-file" id="objectPicture">
                 </div>
 
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+                <button (click)="submitItems(titleItem.value, descriptionItem.value)" class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
               </form>
             </div>
             <div class="col-md-3"></div>
