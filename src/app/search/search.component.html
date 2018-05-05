@@ -15,6 +15,7 @@
           <div class="row">
             <div *ngFor="let cat of searchCategories" class="col-md-3">
               <div (click)="getItemCategorie(cat)" class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{cat.image}}">
                 <div class="card-body">
                   <p> {{cat.name}} </p>
                 </div>
