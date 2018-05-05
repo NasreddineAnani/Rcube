@@ -4,20 +4,20 @@ import { Injectable } from '@angular/core';
 export class CategoriesService {
 
   categories: any = [
-    {name:'Appareils électroniques'},
-    {name:'Pneus'},
-    {name:'Huile et peinture'},
-    {name:'Électroménagers'},
-    {name:'Métal'},
-    {name:'Bois'},
-    {name:'Ordures ménagères'},
-    {name:'Matières recyclables'},
-    {name:'Compostes'},
-    {name:'Déchets encombrants'},
-    {name:'Vêtements et accessoires'},
-    {name:'Meubles'},
-    {name:'Jouets'},
-    {name:'Articles de sport'} ];
+    {name:'Appareils électroniques', reuse: true, image:'', description:'' },
+    {name:'Pneus', reuse: false},
+    {name:'Huile et peinture', reuse: false},
+    {name:'Électroménagers', reuse: true},
+    {name:'Métal', reuse: false},
+    {name:'Bois', reuse: false},
+    {name:'Ordures ménagères', reuse: false},
+    {name:'Matières recyclables', reuse: false},
+    {name:'Compostes', reuse: false},
+    {name:'Déchets encombrants', reuse: false},
+    {name:'Vêtements et accessoires', reuse: true},
+    {name:'Meubles', reuse: true},
+    {name:'Jouets', reuse: true},
+    {name:'Articles de sport', reuse: true} ];
 
 
   constructor() { }

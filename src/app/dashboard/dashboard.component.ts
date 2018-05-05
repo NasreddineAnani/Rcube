@@ -14,7 +14,7 @@ import { CategoriesService } from '../services/categories.service';
 export class DashboardComponent implements OnInit {
 
   categories: any[] = [];
-
+  currentCategorie: any;
   selection: any;
   step: any;
 
@@ -32,5 +32,12 @@ export class DashboardComponent implements OnInit {
     this.categories = this.categoriesService.getCategories();
     this.step = 0;
 
+  }
+
+  getNextStep(categorie) {
+    if(categorie.reuse) {
+      this.currentCategorie = categorie;
+      this.step = 2;
+    }
   }
 }

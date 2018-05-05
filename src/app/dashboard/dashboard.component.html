@@ -28,7 +28,7 @@
       <div class="container">
         <div class="row">
           <div *ngFor="let cat of categories" class="col-md-3">
-            <div class="card mb-4 box-shadow">
+            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
               <div class="card-body">
                 <p> {{cat.name}} </p>
               </div>
@@ -37,12 +37,10 @@
         </div>
       </div>
     </div>
-
   </div>
-
 </section>
 
-<section class="row category">
+<section *ngIf="step === 2" class="row category animated slideInRight">
     <div class="card">
       <div class="card-header">
         Objet à donner
