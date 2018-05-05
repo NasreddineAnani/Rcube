@@ -26,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AgmCoreModule } from '@agm/core';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCq5K8mLvTVakYFXLBGiPVaEafA0W5tIJc",
@@ -62,7 +63,10 @@ const appRoutes: Routes = [
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC4uSW7IkXhjEAM9JrO1MaEoAw2US1ExPM'
+    })
   ],
   providers: [
     AuthGuard,
