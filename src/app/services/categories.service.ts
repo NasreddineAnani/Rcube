@@ -17,7 +17,7 @@ export class CategoriesService {
     {name:'Vêtements et accessoires', reuse: true, image:'', description:''},
     {name:'Meubles', reuse: true, image:'', description:''},
     {name:'Jouets', reuse: true, image:'', description:''},
-    {name:'Articles de sport', reuse: true, image:'', description:''} ];
+    {name:'Articles de sport', reuse: true, image:'https://images.pexels.com/photos/364308/pexels-photo-364308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', description:''} ];
 
 
   constructor() { }
