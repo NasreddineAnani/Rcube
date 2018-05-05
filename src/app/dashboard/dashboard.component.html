@@ -50,7 +50,7 @@
   </div>
 
   <section *ngIf="step == 1" class="row category animated slideInRight">
-    <div class="col-12 card w-90 p-3">
+    <div class="col-12 card w-90 p-3 shadow border-0">
       <h1>Jeter ou donner</h1>
       <div class="jumbotron text-center">
         <div class="container">
@@ -62,8 +62,10 @@
       <div class="py-5 bg-light">
         <div class="container">
           <div class="row">
+
+
             <div *ngFor="let cat of categories" class="col-md-3">
-              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 box-shadow">
+              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 shadow border-0">
                 <img class="img-cat" src="{{cat.image}}">
                 <div class="card-body">
                   <p> {{cat.name}} </p>
@@ -124,7 +126,7 @@
 
   <!--  book-->
   <section *ngIf="step == 3" class="row category animated slideInRight">
-    <div class="col-12 card w-90 p-3" style="">
+    <div class="col-12 card w-90 p-3 shadow border-0">
       <div class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
@@ -138,27 +140,39 @@
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
+
+
+
+              <div class="form-group row">
+                <label for="example-date-input" class="col-12 col-form-label">Date de prise en charge à votre domicile</label>
+                <div class="col-12">
+                  <input class="form-control" type="date" value="2018-05-06" id="example-date-input">
+                </div>
+              </div>
+
               <form>
                 <div class="mb-3">
                   <label>Dimension de l'objet à prendre en charge</label>
                   <div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio">Petit
+                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio" > Petit ( < 30 cm<sup>3</sup>)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio">Moyen
+                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio"> Moyen ( < 1 m<sup>3</sup>)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio">Grand
+                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio"> Grand ( < 3 m<sup>3</sup>)
                       </label>
                     </div>
                   </div>
                 </div>
+
+
                 <div class="mb-3">
                   <label for="serviceDate">Date de prise en charge à votre domicile</label>
                   <input  #date type="date" id="serviceDate">
