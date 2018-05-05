@@ -21,6 +21,9 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(this.authService.currentUser()){
+      this.router.navigate(['dashboard']);
+    }
   }
 
   register(lastname, firstname, address, phoneNumber, email, password, passwordConfirmation) {

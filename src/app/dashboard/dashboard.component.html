@@ -1,6 +1,6 @@
-<div class="p-5">
 
-<div *ngIf="step === 0" class="row animated slideInRight">
+<div class="p-5">
+<div *ngIf="step == 0" class="row animated slideInRight">
   <div class="card col-12 w-90 p-3">
     <div class="jumbotron text-center">
       <div class="container">
@@ -29,7 +29,7 @@
       <div class="container">
         <div class="row">
           <div *ngFor="let cat of categories" class="col-md-3">
-            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow">
+            <div (click)="getNextStep(cat)" class="card mb-4 box-shadow" style="background-image: url({{cat.image}})">
               <div class="card-body">
                 <p> {{cat.name}} </p>
               </div>
@@ -41,30 +41,102 @@
   </div>
 </section>
 
-<section *ngIf="step === 2" class="row category animated slideInRight">
-    <div class="card">
-      <div class="card-header">
-        Objet à donner
+<section *ngIf="step == 2" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3" style="">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Service de prise en charge</h1>
+        <p class="lead text-muted">Voici le centre offrant le service de prise en charge le plus près de chez vous.</p>
       </div>
-      <div class="card-group card-body col-12">
-          <div class="row">
-            <div class="card col-6">
-              <h5 class="card-title">Titre objet</h5>
-              <div class="card-body">
-              <p class="card-text">Description de l'objet Lorem ipsum dolor sit amet, metus mollit magnis, non cras porta nulla ac, diam sed neque tellus felis tortor, in massa tortor. Sagittis sed, massa luctus augue lacus penatibus massa sed. Enim lobortis sollicitudin sodales velit metus, sociosqu nunc, massa in, nullam id ut urna vulputate. Mus tristique, lectus fusce, vitae enim magna magna mi pellentesque, litora nunc. Scelerisque commodo, quisque tempor, amet nonummy, lorem odio velit pellentesque mattis. Praesent at rutrum congue senectus, gravida faucibus id posuere velit, aliquet ut duis nec proin sed, aenean pede sem morbi vestibulum tempor. A nonummy eget in, cum eleifend duis lobortis ultricies nullam, vestibulum lectus et lectus. Velit orci, tellus sit mollis, adipiscing in molestias ut nam nullam pellentesque, dolor volutpat id mattis ante leo ut, mattis risus velit. Sem sapien velit habitant ac, tempus elit suspendisse commodo justo nulla sit, leo adipiscing per cum nec viverra at.</p>
+    </div>
+
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <p> Veuillez vous rendre à cet écocentre afin de pouvoir disposer de votre objet.</p>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <div><p> Coordonnées</p></div>
+                <div><hr></div>
+                <div><p> 874 rue Jean Noel, Québec, Qc, G1X 2T6</p></div>
               </div>
             </div>
-            <div class="card col-6 img-container text-center">
-              <div class="card-body">
-              <img class="product-img img-responsive" src="https://mobileimages.lowes.com/product/converted/755625/755625008961.jpg">
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <div><p> Heures d'ouverture</p></div>
+                <div><hr></div>
+                <div><p>Lundi : 8h à 17h <br>Mardi : 8h à 17h <br>Mercredi : 8h à 17h <br>Jeudi : 8h à 17h <br>Vendredi : 8h à 17h <br>Samedi : 8h à 17h <br>Dimanche : 8h à 17h <br></p></div>
               </div>
             </div>
           </div>
-        <div class="card-footer">
-          <button type="button" class="btn btn-primary">Récuperer l'article</button>
+          <div class="col-md-6">
+            <div class="card mb-4 box-shadow">
+              <div id="map" style="width:100%;height:400px;">
+                <agm-map [latitude]="lat" [longitude]="lng">
+                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section *ngIf="step == 3" class="row category animated slideInRight">
+  <div class="col-12 card w-90 p-3" style="">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
+        <p class="lead text-muted">Veuiller remplir le formulaire suivant afin de profiter du service de prise en charge à domicile offert par votre municipalité.</p>
+      </div>
+    </div>
+
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label>Dimension de l'objet à prendre en charge</label>
+                <div>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Petit
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Moyen
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Grand
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="serviceDate">Date de prise en charge à votre domicile</label>
+                <input type="date" id="serviceDate">
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+            </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </div>
