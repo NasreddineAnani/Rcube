@@ -2,8 +2,7 @@
 
   <section *ngIf="step === 1" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3">
-      <h1>Chercher des objets à donner</h1>
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
           <p class="lead text-muted">Veuillez choisir la catégorie correspondant à l'objet que souhaitez trouver</p>
@@ -14,10 +13,10 @@
         <div class="container">
           <div class="row">
             <div *ngFor="let cat of searchCategories" class="col-md-3">
-              <div (click)="getItemCategorie(cat)" class="card mb-4 box-shadow">
+              <div (click)="getItemCategorie(cat)" class="card mb-4 shadow border-0 cardBorderBottom">
                 <img class="card-img-top" src="{{cat.image}}">
                 <div class="card-body">
-                  <p> {{cat.name}} </p>
+                  <h3 class="cardItemText"> {{cat.name}} </h3>
                 </div>
               </div>
             </div>

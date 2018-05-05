@@ -11,8 +11,8 @@
   </div>
 
   <div *ngIf="step === 0" class="pt-2 row animated fadeIn">
-    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 p-3 border-0 shadow mx-auto bgCard">
-      <div class="jumbotron text-center">
+    <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-10 mw-70 pl-5 pr-5 pb-5 border-0 shadow mx-auto bgCard">
+      <div class="jumbotron text-center pb-1 bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Sélectionner</h1>
           <hr class="style14">
@@ -24,7 +24,7 @@
         <div class="card col m-3 text-center h-100 shadow border-0">
           <div class="card-body">
             <img (click)="redirectHome()" src="../../assets/img/logoBoxRecyclage.svg" class="logoStyle m-4">
-            <h5 class="m-4">Trouver la façon la plus écologique <br>
+            <h5 class="m-4">Trouver la façon la plus écologique
               de disposer de vos déchets ou articles réutilisables</h5>
             <div class="text-center">
               <button (click)="step = 1" class="btn btn-lg btn-success m-4 w-50 text-center" role="button">Disposer</button>
@@ -50,8 +50,7 @@
   </div>
   <section *ngIf="step == 1" class="row category animated slideInRight">
     <div class="col-12 card w-90 p-3 shadow border-0">
-      <h1>Jeter ou donner</h1>
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Catégories</h1>
           <hr class="style14">
@@ -65,10 +64,10 @@
 
 
             <div *ngFor="let cat of categories" class="col-md-3">
-              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 shadow border-0">
+              <div (click)="categorie = cat.name;getNextStep(cat)" class="card mb-4 shadow border-0 cardBorderBottom">
                 <img class="img-cat" src="{{cat.image}}">
                 <div class="card-body">
-                  <p> {{cat.name}} </p>
+                  <h3 class="cardItemText"> {{cat.name}} </h3>
                 </div>
               </div>
             </div>
@@ -81,7 +80,7 @@
   <!--ecocentre-->
   <section *ngIf="step == 2" class="category animated slideInRight">
     <div class="card col-xs-12  col-sm-12  col-md-12 col-lg-12 col-xl-8 mw-70 p-3 border-0 shadow mx-auto">
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge</h1>
           <hr class="style14">
@@ -126,7 +125,7 @@
   <!--  book-->
   <section *ngIf="step == 3" class="row category animated slideInRight">
     <div class="col-12 card w-90 p-3 shadow border-0">
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
           <p class="lead text-muted">Veuiller remplir le formulaire suivant afin de profiter du service de prise en
@@ -189,7 +188,7 @@
   <!--  service d'ordure-->
   <section *ngIf="step == 4" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Service de prise en charge à domicile</h1>
           <p class="lead text-muted">Votre municipalité s'occupe de la prise en charge de ce type de matières
@@ -218,7 +217,7 @@
   <!--  donner-->
   <section *ngIf="step == 5" class="row category animated fadeIn">
     <div class="col-12 card w-90 p-3" style="">
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center bgJombotron">
         <div class="container">
           <h1 class="jumbotron-heading">Offrir l'objet à disposer</h1>
           <p class="lead text-muted">Veuiller remplir le formulaire suivant afin d'offrir votre objet à un autre citoyen
