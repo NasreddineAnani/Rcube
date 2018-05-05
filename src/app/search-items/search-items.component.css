@@ -8,3 +8,7 @@
   overflow: hidden;
 }
 
+.imageItemSeul {
+  max-width: 100%;
+}
+
