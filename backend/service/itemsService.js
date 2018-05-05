@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 const db = admin.firestore();
 
 
-const linksService = {
+const itemsService = {
   getItems: function getLink(id) {
     return new Promise(function (resolve, reject) {
       resolve(true);
@@ -13,5 +13,5 @@ const linksService = {
 }
 
 module.exports = {
-  linksService: linksService
+  itemsService: itemsService
 };
