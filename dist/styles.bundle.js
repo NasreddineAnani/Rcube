@@ -3,7 +3,7 @@ webpackJsonp(["styles"],{
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = ".body {\n  height: 100%;\n  width: 100%;\n}\n\n\n"
+module.exports = ".buttonWhite{\n  background-color: white;\n  border-color: #288052;\n  border-radius: 1.85rem;\n  color: #288052;\n}\n\n.buttonColor{\n  border-radius: 1.85rem;\n  background-color: #288052;\n  color: white;\n  font-family: 'Open Sans', sans-serif;\n}\n\n.bgJombotron {\n  background-color: transparent;\n}\n\n.cardItemText {\n  text-align: center;\n  color: #29a746;\n  font-size: 20px;\n}\n\n.cardBorderBottom {\n  border-bottom: 6px solid #28a745;\n  border-radius: .3rem;\n}\n\n.btn-round {\n  border-radius: 50% ;\n}\n\n.h1, .h2, .h3, .h4, .h5, .p, .i {\n  font-family: Futura;\n}\n"
 
 /***/ }),
 

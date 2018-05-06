@@ -20,8 +20,8 @@
           <div (click)="currentItem = item"  class="card m-2 shadow border-0">
             <img class="card-img-top img-item" src="{{item.image}}" alt="{{item.title}}" />
             <div class="card-body">
-              <h4> {{item.title}} </h4>
-              <h5><i class="fa fa-map-marker" aria-hidden="true">  {{item.address}} </i></h5>
+              <h4 class="cardItemText"> {{item.title}} </h4>
+              <h5><i class="fa fa-map-marker" aria-hidden="true"></i> {{item.address}}</h5>
             </div>
           </div>
         </div>
@@ -59,10 +59,10 @@
       <div class="card mb-3 shadow border-0">
         <img class="card-img-top" src="{{currentItem.image}}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title"> {{currentItem.title}} </h5>
+          <h5 class="card-title cardItemText"> {{currentItem.title}} </h5>
           <h5> {{currentItem.description}}</h5>
 
-          <h5><i class="fa fa-map-marker" aria-hidden="true"> {{currentItem.address}}</i></h5>
+          <h5><i class="fa fa-map-marker" aria-hidden="true"></i> {{currentItem.address}}</h5>
           <h5><i class="fa fa-phone" aria-hidden="true"></i> {{currentItem.phoneNumber}}</h5>
         </div>
       </div>

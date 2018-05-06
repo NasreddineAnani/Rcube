@@ -162,23 +162,23 @@
                   <div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio" > Petit ( < 30 cm<sup>3</sup>)
+                        <input (click)="pickUpSize = 'small'" type="radio" name="optradio" > Petit ( < 5 cm X 5 cm X 5 cm)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio"> Moyen ( < 1 m<sup>3</sup>)
+                        <input (click)="pickUpSize = 'medium'" type="radio" name="optradio"> Moyen ( < 30 cm X 30 cm X 30 cm)
                       </label>
                     </div>
                     <div>
                       <label class="radio-inline">
-                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio"> Grand ( < 3 m<sup>3</sup>)
+                        <input (click)="pickUpSize = 'big'" type="radio" name="optradio"> Grand ( < 60 cm X 60 cm X 60 cm)
                       </label>
                     </div>
                   </div>
                 </div>
 
-                <button (click)="bookPickUp(date.value)" class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+                <button (click)="bookPickUp(date.value)" class="btn btn-success btn-lg btn-block" type="submit">Valider</button>
               </form>
             </div>
             <div class="col-md-3"></div>
@@ -261,7 +261,7 @@
                   </ngx-uploadcare-widget>
                 </div>
 
-                <button (click)="submitItems(titleItem.value, descriptionItem.value)" class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+                <button (click)="submitItems(titleItem.value, descriptionItem.value)" class="btn btn-success btn-lg btn-block" type="submit">Valider</button>
               </form>
             </div>
             <div class="col-md-3"></div>
